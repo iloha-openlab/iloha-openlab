@@ -1,0 +1,68 @@
+---
+const { title, description, lang } = Astro.props;
+---
+
+<!doctype html>
+<html lang={lang}>
+  <head>
+    <meta charset="UTF-8" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+
+    <!-- hreflang -->
+    <link rel="alternate" hreflang="ja" href="https://iloha-openlab.com/ja/" />
+    <link rel="alternate" hreflang="en" href="https://iloha-openlab.com/en/" />
+    <link rel="alternate" hreflang="x-default" href="https://iloha-openlab.com/en/" />
+
+    <meta property="og:locale" content={lang === "ja" ? "ja_JP" : "en_US"} />
+  </head>
+
+  <body>
+    <slot />
+    <div id="cookie-banner" style="
+    position:fixed;
+    bottom:0;
+    left:0;
+    right:0;
+    background:#f5f5f5;
+    padding:1rem;
+    border-top:1px solid #ccc;
+    display:none;
+    font-size:0.9rem;">
+      <p>
+        ILOHA OpenLab LLC uses essential cookies for website functionality.
+        Optional analytics cookies are used only with your consent.
+      </p>
+      <button id="accept-cookies">Accept</button>
+      <button id="decline-cookies">Decline</button>
+    </div>
+
+    <script>
+      const banner = document.getElementById("cookie-banner");
+      const consent = localStorage.getItem("cookie-consent");
+
+      if (!consent) {
+        banner.style.display = "block";
+      }
+
+      document.getElementById("accept-cookies").onclick = () => {
+        localStorage.setItem("cookie-consent", "accepted");
+        banner.style.display = "none";
+        loadAnalytics();
+      };
+
+      document.getElementById("decline-cookies").onclick = () => {
+        localStorage.setItem("cookie-consent", "declined");
+        banner.style.display = "none";
+      };
+
+      function loadAnalytics() {
+        // TODO Analytics
+      }
+
+      if (consent === "accepted") {
+        loadAnalytics();
+      }
+    </script>
+  </body>
+</html>

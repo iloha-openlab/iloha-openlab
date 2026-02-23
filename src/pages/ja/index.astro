@@ -1,0 +1,39 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import t from "../../i18n/ja";
+---
+
+<BaseLayout
+  lang="ja"
+  title={`${t.company.nameJa} | 公式サイト`}
+  description={`${t.company.nameJa}の公式ウェブサイト`}
+>
+  <h1>{t.company.nameJa}</h1>
+  <p><strong>{t.company.nameEn}</strong></p>
+
+  <nav>
+    <a href="/ja/">ホーム</a> |
+    <a href="/ja/privacy/">プライバシーポリシー</a> |
+    <a href="/en/">English</a>
+  </nav>
+
+  <section>
+    <h2>会社概要</h2>
+    <table>
+      <tr><th>商号</th><td>{t.company.nameJa}</td></tr>
+      <tr><th>英文名称</th><td>{t.company.nameEn}</td></tr>
+      <tr><th>法人形態</th><td>{t.company.legalForm}</td></tr>
+      <tr><th>本店所在地</th><td>{t.company.headOffice}</td></tr>
+      <tr><th>事業年度</th><td>{t.company.fiscalYear}</td></tr>
+      <tr>
+        <th>事業内容</th>
+        <td>
+          <ul>
+            {t.business.map(item => <li>{item}</li>)}
+          </ul>
+        </td>
+      </tr>
+      <tr><th>連絡先</th><td>{t.company.contact}</td></tr>
+    </table>
+  </section>
+</BaseLayout>
