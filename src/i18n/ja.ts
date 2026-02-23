@@ -2,6 +2,9 @@ export default {
     company: {
         nameJa: "ILOHAオープンラボ合同会社",
         nameEn: "ILOHA OpenLab LLC",
+        tagline: "Engineering Open Ecosystems",
+        mission: "専門的支援と長期的コミットメントにより、Open SourceおよびOpen Dataの持続可能なエコシステムを支える。",
+        brandStory: "「いろは」とは、物事の基礎を意味します。ILOHA Open Lab は、Open SourceおよびOpen Dataの持続可能性は、確かな基盤と基礎の上に成り立つと考えます。私たちはツールの導入にとどまらず、その基盤となる技術の強化に取り組みます。",
         legalForm: "合同会社（社員有限責任）",
         headOffice: "東京都北区",
         fiscalYear: "1月1日から12月31日",
