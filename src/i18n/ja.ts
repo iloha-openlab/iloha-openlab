@@ -8,7 +8,8 @@ export default {
         legalForm: "合同会社（社員有限責任）",
         headOffice: "東京都北区",
         fiscalYear: "1月1日から12月31日",
-        contact: "contact@iloha-openlab.com"
+        contact: "contact@iloha-openlab.com",
+        linkedin: "https://www.linkedin.com/company/iloha-openlab/",
     },
 
     business: [

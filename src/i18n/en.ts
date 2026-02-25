@@ -9,7 +9,8 @@ export default {
         legalForm: "Limited Liability Company",
         headOffice: "Kita-ku, Tokyo, Japan",
         fiscalYear: "January 1 – December 31",
-        contact: "contact@iloha-openlab.com"
+        contact: "contact@iloha-openlab.com",
+        linkedin: "https://www.linkedin.com/company/iloha-openlab/",
     },
 
     business: [
