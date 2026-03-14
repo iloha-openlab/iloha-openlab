@@ -12,6 +12,12 @@ export default {
         linkedin: "https://www.linkedin.com/company/iloha-openlab/",
         id: "1011503006903",
     },
+    news: {
+        title: "おしらせ",
+        latestNews: "最新のおしらせ",
+        backToList: "一覧に戻る",
+        readMore: "詳細を見る",
+    },
 
     business: [
         "翻訳支援ソフトウェア及び関連システムの導入支援、保守、運用支援並びにコンサルティング",

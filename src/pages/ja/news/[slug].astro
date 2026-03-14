@@ -1,0 +1,63 @@
+---
+import { Image } from "astro:assets";
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import { getDictionary } from "../../../i18n";
+import { getCollection } from "astro:content";
+
+export async function getStaticPaths() {
+  const newsEntries = await getCollection("news", ({ data }) => data.lang === "ja");
+  return newsEntries.map(entry => ({
+    params: { slug: entry.id.replace(/\.ja\.md$/, '') }, props: { entry },
+  }));
+}
+
+const { entry } = Astro.props;
+const { Content } = await entry.render();
+const lang = "ja";
+const t = getDictionary(lang);
+---
+
+<BaseLayout
+  lang={lang}
+  title={`${entry.data.title} | ${t.company.nameJa}`}
+  description={entry.data.description}
+>
+  <nav>
+    <a href="/ja/news/">{t.news.backToList}</a>
+  </nav>
+
+  <article>
+    <h1>{entry.data.title}</h1>
+    <time datetime={entry.data.date.toISOString()}>
+      {entry.data.date.toLocaleDateString(lang, { year: 'numeric', month: 'long', day: 'numeric' })}
+    </time>
+    {entry.data.image && (
+      typeof entry.data.image === "string" ? (
+        <img src={entry.data.image} alt="" class="hero-image" />
+      ) : (
+        <Image src={entry.data.image} alt="" class="hero-image" />
+      )
+    )}
+    <div class="content">
+      <Content />
+    </div>
+  </article>
+</BaseLayout>
+
+<style>
+  time {
+    color: #666;
+    display: block;
+    margin-bottom: 2rem;
+  }
+  .hero-image {
+    width: auto;
+    max-width: 100%;
+    max-height: 200px;
+    height: auto;
+    margin-bottom: 2rem;
+  }
+  .content {
+    line-height: 1.6;
+  }
+</style>
