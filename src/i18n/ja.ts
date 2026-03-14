@@ -5,11 +5,12 @@ export default {
         tagline: "Engineering Open Ecosystems",
         mission: "専門的支援と長期的コミットメントにより、Open SourceおよびOpen Dataの持続可能なエコシステムを支える。",
         brandStory: "「いろは」とは、物事の基礎を意味します。ILOHA Open Lab は、Open SourceおよびOpen Dataの持続可能性は、確かな基盤と基礎の上に成り立つと考えます。私たちはツールの導入にとどまらず、その基盤となる技術の強化に取り組みます。",
-        legalForm: "合同会社（設立準備中）",
+        legalForm: "合同会社",
         headOffice: "東京都北区赤羽一丁目7-9 赤羽第一葉山ビル4F",
         fiscalYear: "1月1日から12月31日",
         contact: "contact@iloha-openlab.com",
         linkedin: "https://www.linkedin.com/company/iloha-openlab/",
+        id: "1011503006903",
     },
 
     business: [
