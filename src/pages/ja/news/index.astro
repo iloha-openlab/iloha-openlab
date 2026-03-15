@@ -1,0 +1,56 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import { getDictionary } from "../../../i18n";
+import { getCollection } from "astro:content";
+
+const lang = "ja";
+const t = getDictionary(lang);
+
+const newsEntries = await getCollection("news", ({ data }) => {
+  return data.lang === lang;
+});
+
+newsEntries.sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+---
+
+<BaseLayout
+  lang={lang}
+  title={`${t.news.title} | ${t.company.nameJa}`}
+  description={t.news.title}
+>
+  <nav>
+    <a href="/ja/">ホーム</a> |
+    <a href="/en/news/">English</a>
+  </nav>
+
+  <h1>{t.news.title}</h1>
+
+  <ul class="news-list">
+    {newsEntries.map(entry => (
+      <li>
+        <time datetime={entry.data.date.toISOString()}>
+          {entry.data.date.toLocaleDateString(lang, { year: 'numeric', month: 'long', day: 'numeric' })}
+        </time>
+        <a href={`/ja/news/${entry.id.replace(/\.ja\.md$/, '')}/`}>{entry.data.title}</a>
+        <p>{entry.data.description}</p>
+      </li>
+    ))}
+  </ul>
+</BaseLayout>
+
+<style>
+  .news-list {
+    list-style: none;
+    padding: 0;
+  }
+  .news-list li {
+    margin-bottom: 2rem;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 1rem;
+  }
+  .news-list time {
+    display: block;
+    color: #666;
+    font-size: 0.9rem;
+  }
+</style>

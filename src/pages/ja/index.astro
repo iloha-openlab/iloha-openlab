@@ -1,11 +1,21 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import { getDictionary } from "../../i18n";
-const t = getDictionary("ja");
+import { getCollection } from "astro:content";
+
+const lang = "ja";
+const t = getDictionary(lang);
+
+const newsEntries = await getCollection("news", ({ data }) => {
+  return data.lang === lang;
+});
+
+newsEntries.sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+const recentNews = newsEntries.slice(0, 3);
 ---
 
 <BaseLayout
-  lang="ja"
+  lang={lang}
   title={`${t.company.nameJa} | 公式サイト`}
   description={`${t.company.nameJa}の公式ウェブサイト`}
 >
@@ -18,12 +28,28 @@ const t = getDictionary("ja");
 
   <nav>
     <a href="/ja/">ホーム</a> |
+    <a href="/ja/news/">おしらせ</a> |
     <a href="/ja/privacy/">プライバシーポリシー</a> |
     <a href="/en/">English</a>
   </nav>
 
   <section class="mission">
     <p>{t.company.mission}</p>
+  </section>
+
+  <section class="news-excerpt">
+    <h2>{t.news.title}</h2>
+    <ul class="news-list">
+      {recentNews.map(entry => (
+        <li>
+          <time datetime={entry.data.date.toISOString()}>
+            {entry.data.date.toLocaleDateString(lang, { year: 'numeric', month: 'long', day: 'numeric' })}
+          </time>
+          <a href={`/ja/news/${entry.id.replace(/\.ja\.md$/, '')}/`}>{entry.data.title}</a>
+        </li>
+      ))}
+    </ul>
+    <p><a href="/ja/news/">すべてのおしらせ...</a></p>
   </section>
 
   <section class="brand-story">
@@ -53,3 +79,18 @@ const t = getDictionary("ja");
     </table>
   </section>
 </BaseLayout>
+
+<style>
+  .news-list {
+    list-style: none;
+    padding: 0;
+  }
+  .news-list li {
+    margin-bottom: 0.5rem;
+  }
+  .news-list time {
+    color: #666;
+    font-size: 0.9rem;
+    margin-right: 1rem;
+  }
+</style>

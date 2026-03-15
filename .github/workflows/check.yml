@@ -29,12 +29,12 @@ jobs:
         uses: actions/cache@v4
         with:
           path: .lycheecache
-          key: ${{ runner.os }}-lychee-${{ hashFiles('**/*.md', '**/*.html', '**/*.astro') }}
+          key: ${{ runner.os }}-lychee-${{ hashFiles('README.md', 'public/**/*', 'dist/**/*.html', 'src/**/*.astro', 'src/**/*.css') }}
           restore-keys: |
             ${{ runner.os }}-lychee-
 
       - name: Link Checker
         uses: lycheeverse/lychee-action@v2
         with:
-          args: --cache --verbose --no-progress --root-dir ./dist './dist/**/*.html'
+          args: --cache --verbose --no-progress --root-dir ./dist --remap '\"^/([^.]*)$\" \"$1/index.html\"' './dist/**/*.html'
           fail: true

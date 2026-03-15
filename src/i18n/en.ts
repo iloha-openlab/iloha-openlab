@@ -13,6 +13,12 @@ export default {
         linkedin: "https://www.linkedin.com/company/iloha-openlab/",
         id: "1011503006903",
     },
+    news: {
+        title: "News",
+        latestNews: "Latest News",
+        backToList: "Back to List",
+        readMore: "Read more",
+    },
 
     business: [
         "Provision of implementation support, maintenance, operational support, and consulting services for translation support software and related systems.",

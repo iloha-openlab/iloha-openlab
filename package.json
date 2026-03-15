@@ -7,7 +7,7 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "lint:links": "npx lychee --root-dir ./dist ./dist/**/*.html"
+    "lint:links": "npx lychee --root-dir ./dist --remap '\\\"^/([^.]*)$\\\" \\\"$1/index.html\\\"' ./dist/**/*.html"
   },
   "dependencies": {
     "astro": "^5.17.1"
