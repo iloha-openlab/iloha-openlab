@@ -1,43 +1,64 @@
-# Astro Starter Kit: Minimal
+# ILOHA OpenLab LLC Company Website
 
-```sh
-npm create astro@latest -- --template minimal
+This repository contains the source code for the official website of **ILOHA OpenLab LLC**.
+
+The website is accessible at: [https://www.iloha-openlab.com/](https://www.iloha-openlab.com/)
+
+## 🚀 Built With
+
+-   [Astro](https://astro.build/) - The web framework for content-driven websites.
+-   [TypeScript](https://www.typescriptlang.org/) - For type-safe development.
+
+## 📁 Project Structure
+
+Inside the project, you'll find the following folders and files:
+
+-   `public/`: Static assets like images and fonts.
+-   `src/`:
+    -   `content/`: Content collections (news, etc.).
+    -   `i18n/`: Internationalization configuration and translations.
+    -   `layouts/`: Common page layouts.
+    -   `pages/`: The website's routing and page components (multilingual: `en/` and `ja/`).
+    -   `styles/`: Global CSS and styling.
+-   `astro.config.mjs`: Astro configuration file.
+
+## 🛠️ Getting Started
+
+To run the project locally, ensure you have [Node.js](https://nodejs.org/) installed.
+
+1.  **Install dependencies:**
+
+    ```bash
+    npm install
+    ```
+
+2.  **Start the development server:**
+
+    ```bash
+    npm run dev
+    ```
+
+    The site will be available at `http://localhost:4321`.
+
+## 📦 Building for Production
+
+To create a production build:
+
+```bash
+npm run build
 ```
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+The output will be generated in the `dist/` directory.
 
-## 🚀 Project Structure
+To preview the production build locally:
 
-Inside of your Astro project, you'll see the following folders and files:
-
-```text
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
+```bash
+npm run preview
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+## 📄 License and Trademark
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+The source code of this website is licensed under the [MIT License](LICENSE).
 
-Any static assets, like images, can be placed in the `public/` directory.
-
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+**Important:** The ILOHA OpenLab LLC name and logo are trademarks of ILOHA OpenLab LLC. These trademarks are not covered by the MIT License and may not be used without prior written permission.
+For guidance on using logo assets to link to our website, please refer to the [Logo Usage Guide](LOGO_GUIDE.md).
