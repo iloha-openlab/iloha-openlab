@@ -1,13 +1,17 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
+import { getDictionary } from "../../i18n";
+
+const lang = "ja";
+const t = getDictionary(lang);
 ---
 
 <BaseLayout
-  lang="ja"
-  title="プライバシーポリシー | ILOHA OpenLab LLC"
-  description="ILOHA OpenLab LLCの個人情報保護方針"
+  lang={lang}
+  title={`${t.nav.privacy} | ${t.company.nameJa}`}
+  description={t.nav.privacy}
 >
-  <h1>プライバシーポリシー</h1>
+  <h1>{t.nav.privacy}</h1>
 
   <p>
     ILOHA OpenLab LLC（以下「当社」といいます。）は、
@@ -91,4 +95,10 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
     最新版は本ページに掲載します。
   </p>
 
+  <nav style="margin-top: 2rem;">
+    <a href="/ja/">{t.nav.home}</a> |
+    <a href="/ja/news/">{t.nav.news}</a> |
+    <a href="/ja/logo-policy/">{t.nav.logoPolicy}</a> |
+    <a href="/en/privacy/">English</a>
+  </nav>
 </BaseLayout>

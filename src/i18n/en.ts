@@ -19,6 +19,12 @@ export default {
         backToList: "Back to List",
         readMore: "Read more",
     },
+    nav: {
+        home: "Home",
+        news: "News",
+        privacy: "Privacy Policy",
+        logoPolicy: "Logo Usage Policy",
+    },
 
     business: [
         "Provision of implementation support, maintenance, operational support, and consulting services for translation support software and related systems.",
