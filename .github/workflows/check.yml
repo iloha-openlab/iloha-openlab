@@ -36,5 +36,5 @@ jobs:
       - name: Link Checker
         uses: lycheeverse/lychee-action@v2
         with:
-          args: --cache --verbose --no-progress './dist/**/*.html' './**/*.md'
+          args: --cache --verbose --no-progress --root-dir ./dist './dist/**/*.html'
           fail: true
