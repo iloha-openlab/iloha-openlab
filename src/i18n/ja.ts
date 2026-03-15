@@ -18,6 +18,12 @@ export default {
         backToList: "一覧に戻る",
         readMore: "詳細を見る",
     },
+    nav: {
+        home: "ホーム",
+        news: "おしらせ",
+        privacy: "プライバシーポリシー",
+        logoPolicy: "ロゴ使用規定",
+    },
 
     business: [
         "翻訳支援ソフトウェア及び関連システムの導入支援、保守、運用支援並びにコンサルティング",

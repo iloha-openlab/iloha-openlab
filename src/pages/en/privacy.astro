@@ -1,13 +1,17 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
+import { getDictionary } from "../../i18n";
+
+const lang = "en";
+const t = getDictionary(lang);
 ---
 
 <BaseLayout
-  lang="en"
-  title="Privacy Policy | ILOHA OpenLab LLC"
-  description="Privacy Policy of ILOHA OpenLab LLC"
+  lang={lang}
+  title={`${t.nav.privacy} | ${t.company.nameEn}`}
+  description={t.nav.privacy}
 >
-  <h1>Privacy Policy</h1>
+  <h1>{t.nav.privacy}</h1>
 
 <p>
 This Privacy Policy describes how ILOHA OpenLab LLC ("Company", "we", "us", or "our")
@@ -86,4 +90,10 @@ Analytics or tracking cookies are used only after obtaining user consent.
 We may update this Privacy Policy from time to time.
 The updated version will be posted on this page.
 </p>
+  <nav style="margin-top: 2rem;">
+    <a href="/en/">{t.nav.home}</a> |
+    <a href="/en/news/">{t.nav.news}</a> |
+    <a href="/en/logo-policy/">{t.nav.logoPolicy}</a> |
+    <a href="/ja/privacy/">日本語</a>
+  </nav>
 </BaseLayout>

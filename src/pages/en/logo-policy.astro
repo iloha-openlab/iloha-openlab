@@ -1,0 +1,52 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { getDictionary } from "../../i18n";
+
+const lang = "en";
+const t = getDictionary(lang);
+---
+
+<BaseLayout
+  lang={lang}
+  title={`${t.nav.logoPolicy} | ${t.company.nameEn}`}
+  description={`Logo usage guide and policy for ${t.company.nameEn}`}
+>
+  <h1>{t.nav.logoPolicy}</h1>
+
+  <p>This guide provides instructions and assets for using the official <strong>ILOHA OpenLab LLC</strong> logo.</p>
+
+  <h2>Usage Policy</h2>
+  <p>The ILOHA OpenLab LLC name and logo are protected trademarks. However, we allow the use of these logo assets by third parties to link to our official website (https://www.iloha-openlab.com/) under the following conditions:</p>
+
+  <ol>
+    <li><strong>Permission Required:</strong> You must obtain written permission from ILOHA OpenLab LLC before using our logo on any third-party website or material.</li>
+    <li><strong>Purpose:</strong> The logo may only be used to point or link to the official ILOHA OpenLab LLC website.</li>
+    <li><strong>No Modification:</strong> You may not modify, distort, or change the colors of the logo assets provided.</li>
+    <li><strong>No Endorsement:</strong> Usage of the logo does not imply endorsement, sponsorship, or affiliation with your website or product by ILOHA OpenLab LLC.</li>
+  </ol>
+
+  <h2>Logo Assets</h2>
+  <p>The following logo assets are available for use:</p>
+
+  <h3>Standard Logo (Icon)</h3>
+  <ul>
+    <li><a href="/images/logo.svg">logo.svg</a> - Vector format (recommended)</li>
+    <li><a href="/images/logo.png">logo.png</a> - Raster format</li>
+  </ul>
+
+  <h3>Horizontal Logo (Name and Icon)</h3>
+  <ul>
+    <li><a href="/images/logo-horizontal.svg">logo-horizontal.svg</a> - Vector format</li>
+    <li><a href="/images/logo-horizontal.png">logo-horizontal.png</a> - Raster format</li>
+  </ul>
+
+  <h2>Requesting Permission</h2>
+  <p>To request permission to use our logo, please contact us at: <a href={`mailto:${t.company.contact}`}>{t.company.contact}</a>. Please provide the URL where the logo will be displayed and a brief description of the context.</p>
+
+  <nav style="margin-top: 2rem;">
+    <a href="/en/">{t.nav.home}</a> |
+    <a href="/en/news/">{t.nav.news}</a> |
+    <a href="/en/privacy/">{t.nav.privacy}</a> |
+    <a href="/ja/logo-policy/">日本語</a>
+  </nav>
+</BaseLayout>

@@ -19,7 +19,9 @@ newsEntries.sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
   description={t.news.title}
 >
   <nav>
-    <a href="/en/">Home</a> |
+    <a href="/en/">{t.nav.home}</a> |
+    <a href="/en/privacy/">{t.nav.privacy}</a> |
+    <a href="/en/logo-policy/">{t.nav.logoPolicy}</a> |
     <a href="/ja/news/">日本語</a>
   </nav>
 
