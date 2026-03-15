@@ -1,4 +1,4 @@
-name: Playwright Tests
+name: Check Links
 
 on:
   push:
@@ -7,7 +7,7 @@ on:
     branches: [ main ]
 
 jobs:
-  test:
+  check:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -22,19 +22,19 @@ jobs:
       - name: Install
         run: npm ci
 
-      - name: Install playwright browsers
-        run: npx playwright install --with-deps
-
       - name: Build Astro
         run: npm run build
 
-      - name: Run Playwright tests
-        run: npx playwright test
-
-      - name: Upload Playwright report
-        uses: actions/upload-artifact@v4
-        if: always()
+      - name: Restore lychee cache
+        uses: actions/cache@v4
         with:
-          name: playwright-report
-          path: playwright-report/
-          retention-days: 30
+          path: .lycheecache
+          key: ${{ runner.os }}-lychee-${{ hashFiles('**/*.md', '**/*.html', '**/*.astro') }}
+          restore-keys: |
+            ${{ runner.os }}-lychee-
+
+      - name: Link Checker
+        uses: lycheeverse/lychee-action@v2
+        with:
+          args: --cache --verbose --no-progress --root-dir ./dist './dist/**/*.html'
+          fail: true

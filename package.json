@@ -6,13 +6,14 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "lint:links": "npx lychee --root-dir ./dist ./dist/**/*.html"
   },
   "dependencies": {
     "astro": "^5.17.1"
   },
   "devDependencies": {
-    "@playwright/test": "^1.58.2",
-    "@types/node": "^25.3.3"
+    "@types/node": "^25.3.3",
+    "lychee": "^0.2.12"
   }
 }
