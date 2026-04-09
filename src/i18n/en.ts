@@ -12,6 +12,7 @@ export default {
         contact: "contact@iloha-openlab.com",
         linkedin: "https://www.linkedin.com/company/iloha-openlab/",
         id: "1011503006903",
+        duns: "698863495",
         businessCategory: "Software development and OSS consulting services",
         industrialClassification: "Information and communications / Information services / Software (G391)",
         mainBusiness: "Consulting and implementation support for translation and geospatial systems, Open-source software support, Development of in-house tools and plugins",
