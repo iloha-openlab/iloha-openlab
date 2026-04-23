@@ -16,6 +16,7 @@ export default {
         businessCategory: "Software development and OSS consulting services",
         industrialClassification: "Information and communications / Information services / Software (G391)",
         mainBusiness: "Consulting and implementation support for translation and geospatial systems, Open-source software support, Development of in-house tools and plugins",
+        representative: "Hiroshi Miura",
     },
     news: {
         title: "News",

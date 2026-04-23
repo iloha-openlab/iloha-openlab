@@ -15,6 +15,7 @@ export default {
         businessCategory: "ソフトウェア開発・OSS活用コンサルティング業",
         industrialClassification: "情報通信業／情報サービス業／ソフトウェア業 (G391)",
         mainBusiness: "翻訳支援・地理空間情報システムの導入支援・コンサルティング、オープンソースソフトウェア支援、自社ツール・プラグインの開発",
+        representative: "三浦広志",
     },
     news: {
         title: "おしらせ",
