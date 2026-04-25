@@ -1,0 +1,175 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { getDictionary } from "../../i18n";
+
+const lang = "ja";
+const t = getDictionary(lang);
+---
+
+<BaseLayout
+  lang={lang}
+  title={`${t.products.title} | ${t.company.nameJa}`}
+  description={`${t.company.nameJa}の商品・サービス一覧`}
+>
+  <h1>{t.products.title}</h1>
+
+  <div class="tabs">
+    <div class="tab-list" role="tablist">
+      {t.products.categories.map((category, index) => (
+        <button
+          class={`tab-button ${index === 0 ? 'active' : ''}`}
+          role="tab"
+          aria-selected={index === 0 ? 'true' : 'false'}
+          aria-controls={`panel-${category.id}`}
+          id={`tab-${category.id}`}
+          data-target={category.id}
+        >
+          {category.name}
+        </button>
+      ))}
+    </div>
+
+    {t.products.categories.map((category, index) => (
+      <div
+        class={`tab-panel ${index === 0 ? 'active' : ''}`}
+        id={`panel-${category.id}`}
+        role="tabpanel"
+        aria-labelledby={`tab-${category.id}`}
+        hidden={index !== 0}
+      >
+        <h2>{category.name}</h2>
+        <p>{category.description}</p>
+        
+        {category.items && category.items.length > 0 && (
+          <div class="product-list">
+            {category.items.map(item => (
+              <div class="product-card">
+                <h3>{item.name}</h3>
+                <p>{item.description}</p>
+                {item.url && (
+                  <p>
+                    <a href={item.url} target="_blank" rel="noopener noreferrer" class="cta-button">
+                      製品サイトへ
+                    </a>
+                  </p>
+                )}
+              </div>
+            ))}
+          </div>
+        )}
+      </div>
+    ))}
+  </div>
+</BaseLayout>
+
+<script>
+  function setupTabs() {
+    const tabs = document.querySelectorAll('.tab-button');
+    const panels = document.querySelectorAll('.tab-panel');
+
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        const target = tab.getAttribute('data-target');
+
+        // Update active tab
+        tabs.forEach(t => {
+          t.classList.remove('active');
+          t.setAttribute('aria-selected', 'false');
+        });
+        tab.classList.add('active');
+        tab.setAttribute('aria-selected', 'true');
+
+        // Update active panel
+        panels.forEach(p => {
+          if (p.id === `panel-${target}`) {
+            p.classList.add('active');
+            p.removeAttribute('hidden');
+          } else {
+            p.classList.remove('active');
+            p.setAttribute('hidden', 'true');
+          }
+        });
+        
+        // Update URL hash without jumping
+        history.replaceState(null, '', `#${target}`);
+      });
+    });
+
+    // Handle hash on load
+    const hash = window.location.hash.substring(1);
+    if (hash) {
+      const targetTab = document.querySelector(`.tab-button[data-target="${hash}"]`);
+      if (targetTab) {
+        (targetTab as HTMLElement).click();
+      }
+    }
+  }
+
+  setupTabs();
+  // For Astro View Transitions
+  document.addEventListener('astro:after-swap', setupTabs);
+</script>
+
+<style>
+  .tabs {
+    margin-top: 2rem;
+  }
+  .tab-list {
+    display: flex;
+    border-bottom: 2px solid #eee;
+    margin-bottom: 2rem;
+    overflow-x: auto;
+  }
+  .tab-button {
+    padding: 1rem 1.5rem;
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #666;
+    border-bottom: 3px solid transparent;
+    white-space: nowrap;
+  }
+  .tab-button:hover {
+    color: #000;
+  }
+  .tab-button.active {
+    color: #0070f3;
+    border-bottom-color: #0070f3;
+  }
+  .tab-panel {
+    padding: 1rem 0;
+  }
+  .tab-panel[hidden] {
+    display: none;
+  }
+  .product-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+  .product-card {
+    border: 1px solid #eee;
+    padding: 1.5rem;
+    border-radius: 8px;
+    background: #fafafa;
+  }
+  .product-card h3 {
+    margin-top: 0;
+    color: #333;
+  }
+  .cta-button {
+    display: inline-block;
+    background: #0070f3;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 0.9rem;
+  }
+  .cta-button:hover {
+    background: #0051ad;
+  }
+</style>

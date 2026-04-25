@@ -19,73 +19,100 @@ const recentNews = newsEntries.slice(0, 3);
   title={`${t.company.nameJa} | 公式サイト`}
   description={`${t.company.nameJa}の公式ウェブサイト`}
 >
-  <div class="logo-container">
-    <img src="/images/logo-horizontal.svg" alt={t.company.nameEn} class="logo" width="500" height="120" />
-  </div>
   <h1>{t.company.nameJa}</h1>
   <p><strong>{t.company.nameEn}</strong></p>
   <p class="tagline"><strong>{t.company.tagline}</strong></p>
-
-  <nav>
-    <a href="/ja/">{t.nav.home}</a> |
-    <a href="/ja/news/">{t.nav.news}</a> |
-    <a href="/ja/privacy/">{t.nav.privacy}</a> |
-    <a href="/ja/logo-policy/">{t.nav.logoPolicy}</a> |
-    <a href="/en/">English</a>
-  </nav>
 
   <section class="mission">
     <p>{t.company.mission}</p>
   </section>
 
-  <section class="news-excerpt">
-    <h2>{t.news.title}</h2>
-    <ul class="news-list">
-      {recentNews.map(entry => (
-        <li>
-          <time datetime={entry.data.date.toISOString()}>
-            {entry.data.date.toLocaleDateString(lang, { year: 'numeric', month: 'long', day: 'numeric' })}
-          </time>
-          <a href={`/ja/news/${entry.id.replace(/\.ja\.md$/, '')}/`}>{entry.data.title}</a>
-        </li>
-      ))}
-    </ul>
-    <p><a href="/ja/news/">すべてのおしらせ...</a></p>
-  </section>
+  <div class="top-grid">
+    <section class="news-excerpt box">
+      <h2>{t.news.title}</h2>
+      <ul class="news-list">
+        {recentNews.map(entry => (
+          <li>
+            <time datetime={entry.data.date.toISOString()}>
+              {entry.data.date.toLocaleDateString(lang, { year: 'numeric', month: 'long', day: 'numeric' })}
+            </time>
+            <a href={`/ja/news/${entry.id.replace(/\.ja\.md$/, '')}/`}>{entry.data.title}</a>
+          </li>
+        ))}
+      </ul>
+      <p><a href="/ja/news/">すべてのおしらせ...</a></p>
+    </section>
 
-  <section class="brand-story">
-    <h2>ブランドストーリー</h2>
-    <p>{t.company.brandStory}</p>
-  </section>
+    <section class="products box">
+      <h2>{t.products.title}</h2>
+      <div class="product-summary">
+        {t.products.categories.map(category => (
+          <div class="product-category-excerpt">
+            <h3>{category.name}</h3>
+            <p>{category.description}</p>
+          </div>
+        ))}
+      </div>
+      <p><a href="/ja/products/">詳細を見る...</a></p>
+    </section>
 
-  <section>
+    <section class="brand-story box">
+      <h2>ブランドストーリー</h2>
+      <p>{t.company.brandStory}</p>
+    </section>
+  </div>
+
+  <section class="company-overview">
     <h2>会社概要</h2>
-    <table>
-      <tr><th>商号</th><td>{t.company.nameJa}</td></tr>
-      <tr><th>英文名称</th><td>{t.company.nameEn}</td></tr>
-      <tr><th>法人形態</th><td>{t.company.legalForm}</td></tr>
-      <tr><th>代表社員</th><td>{t.company.representative}</td></tr>
-      <tr><th>本店所在地</th><td>{t.company.headOffice}</td></tr>
-      <tr><th>事業年度</th><td>{t.company.fiscalYear}</td></tr>
-      <tr><th>法人番号</th><td>{t.company.id}</td></tr>
-      <tr><th>営業種目</th><td>{t.company.businessCategory}</td></tr>
-      <tr><th>産業分類</th><td>{t.company.industrialClassification}</td></tr>
-      <tr><th>主たる事業</th><td>{t.company.mainBusiness}</td></tr>
-      <tr>
-        <th>事業内容</th>
-        <td>
-          <ul>
-            {t.business.map(item => <li>{item}</li>)}
-          </ul>
-        </td>
-      </tr>
-      <tr><th>LinkedIn</th><td><a href={t.company.linkedin} target="_blank" rel="noopener noreferrer"><img src="/images/logo-horizontal-150.png" alt="ILOHA OpenLab Logo"/>↗️</a></td></tr>
-      <tr><th>連絡先</th><td>{t.company.contact}</td></tr>
-    </table>
+    <div class="overview-grid">
+      <div class="overview-column">
+        <table>
+          <tr><th>商号</th><td>{t.company.nameJa}</td></tr>
+          <tr><th>英文名称</th><td>{t.company.nameEn}</td></tr>
+          <tr><th>法人形態</th><td>{t.company.legalForm}</td></tr>
+          <tr><th>代表社員</th><td>{t.company.representative}</td></tr>
+          <tr><th>本店所在地</th><td>{t.company.headOffice}</td></tr>
+          <tr><th>事業年度</th><td>{t.company.fiscalYear}</td></tr>
+          <tr><th>法人番号</th><td>{t.company.id}</td></tr>
+          <tr><th>LinkedIn</th><td><a href={t.company.linkedin} target="_blank" rel="noopener noreferrer"><img src="/images/logo-horizontal-150.png" alt="ILOHA OpenLab Logo"/>↗️</a></td></tr>
+          <tr><th>連絡先</th><td>{t.company.contact}</td></tr>
+        </table>
+      </div>
+      <div class="overview-column">
+        <table>
+          <tr><th>営業種目</th><td>{t.company.businessCategory}</td></tr>
+          <tr><th>産業分類</th><td>{t.company.industrialClassification}</td></tr>
+          <tr>
+            <th>事業内容</th>
+            <td>
+              {t.company.mainBusiness}
+              <details>
+                <summary>詳細を表示</summary>
+                <ul>
+                  {t.business.map(item => <li>{item}</li>)}
+                </ul>
+              </details>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
   </section>
 </BaseLayout>
 
 <style>
+  .top-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+  }
+  .box {
+    border: 1px solid #eee;
+    padding: 1.5rem;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+  }
   .news-list {
     list-style: none;
     padding: 0;
@@ -97,5 +124,53 @@ const recentNews = newsEntries.slice(0, 3);
     color: #666;
     font-size: 0.9rem;
     margin-right: 1rem;
+    display: block;
+  }
+  .product-category-excerpt {
+    margin-bottom: 1rem;
+  }
+  .product-category-excerpt h3 {
+    margin-bottom: 0.2rem;
+    font-size: 1.1rem;
+  }
+  .product-category-excerpt p {
+    font-size: 0.9rem;
+    margin: 0;
+  }
+  .overview-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+  @media (max-width: 768px) {
+    .overview-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  .overview-column table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  .overview-column th, .overview-column td {
+    text-align: left;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #eee;
+  }
+  .overview-column th {
+    width: 30%;
+    vertical-align: top;
+  }
+  details {
+    cursor: pointer;
+  }
+  details summary {
+    color: #0066cc;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+  }
+  details ul {
+    margin-top: 0.5rem;
+    padding-left: 1.2rem;
+    font-size: 0.9rem;
   }
 </style>

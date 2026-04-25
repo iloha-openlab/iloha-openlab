@@ -32,6 +32,23 @@ body {
     display: block;
 }
 
+header {
+    margin-bottom: 3rem;
+}
+
+nav {
+    margin-bottom: 2rem;
+    font-size: 0.95rem;
+}
+
+nav a {
+    margin: 0 0.2rem;
+}
+
+main {
+    min-height: 50vh;
+}
+
 h1, h2, h3 {
     font-weight: 600;
 }

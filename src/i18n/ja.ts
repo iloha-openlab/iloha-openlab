@@ -26,8 +26,38 @@ export default {
     nav: {
         home: "ホーム",
         news: "おしらせ",
+        products: "商品・サービス",
         privacy: "プライバシーポリシー",
         logoPolicy: "ロゴ使用規定",
+    },
+    products: {
+        title: "商品・サービス",
+        categories: [
+            {
+                id: "omegat",
+                name: "OmegaT関連プロダクト",
+                description: "OmegaTの機能を拡張するプラグインや関連ツールを提供します。",
+                items: [
+                    {
+                        name: "OmegaT DeepL Plugin — Professional Edition",
+                        description: "OmegaT用のフル機能DeepL API統合プラグインです。プロキシ認証、カスタム用語集管理、訳文の丁寧さ（formality）制御などの機能を提供します。",
+                        url: "https://iloha-openlab.lemonsqueezy.com"
+                    }
+                ]
+            },
+            {
+                id: "oss",
+                name: "OSSコンサルティングサービス",
+                description: "オープンソース翻訳ツールや地理空間システムに関する技術コンサルティング、導入支援、受託開発を提供します。",
+                items: []
+            },
+            {
+                id: "osm",
+                name: "OSM関連サービス",
+                description: "OpenStreetMapを用いたマッピング技術トレーニング、GISオペレーション、教育サービスを提供します。",
+                items: []
+            }
+        ]
     },
 
     business: [
