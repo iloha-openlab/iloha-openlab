@@ -1,18 +1,20 @@
+import { common } from "./common";
+
 export default {
     company: {
-        nameEn: "ILOHA OpenLab LLC",
-        nameJa: "ILOHAオープンラボ合同会社",
-        tagline: "Engineering Open Ecosystems",
+        nameEn: common.nameEn,
+        nameJa: common.nameJa,
+        tagline: common.tagline,
         mission: "Engineering sustainable Open Source and Open Data ecosystems through professional support and long-term commitment.",
-        brandStory: "“ILOHA” is derived from the Japanese concept of Iroha — the fundamentals. We believe that sustainable Open Source and Open Data ecosystems require strong foundations, thoughtful engineering, and long-term commitment. ILOHA OpenLab LLC works at the structural level — not only implementing tools, but strengthening the foundations they depend on.",
+        brandStory: "“ILOHA” is derived from the Japanese concept of イロハ — the fundamentals. We believe that sustainable Open Source and Open Data ecosystems require strong foundations, thoughtful engineering, and long-term commitment. ILOHA OpenLab LLC works at the structural level — not only implementing tools, but strengthening the foundations they depend on.",
         positioning: "ILOHA OpenLab LLC provides professional engineering support for Open Source and Open Data ecosystems. We specialize in translation technology (OmegaT), Geospatial tools(OpenStreetMap), plugin development, and advanced technical training. Based in Japan, collaborating across Europe and APAC.",
         legalForm: "Limited Liability Company",
         headOffice: "Akabane First Hayama Bldg. 4F, 1-7-9, Akabane, Kita-ku, Tokyo, Japan",
         fiscalYear: "January 1 – December 31",
-        contact: "contact@iloha-openlab.com",
-        linkedin: "https://www.linkedin.com/company/iloha-openlab/",
-        id: "1011503006903",
-        duns: "698863495",
+        contact: common.contact,
+        linkedin: common.linkedin,
+        id: common.id,
+        duns: common.duns,
         businessCategory: "Software development and OSS consulting services",
         industrialClassification: "Information and communications / Information services / Software (G391)",
         mainBusiness: "Consulting and implementation support for translation and geospatial systems, Open-source software support, Development of in-house tools and plugins",
@@ -42,7 +44,7 @@ export default {
                     {
                         name: "OmegaT DeepL Plugin — Professional Edition",
                         description: "A fully-featured DeepL API integration for OmegaT, providing proxy authentication, custom glossary management, formality control, and more for professional translators and enterprise teams.",
-                        url: "https://iloha-openlab.lemonsqueezy.com"
+                        url: common.storeUrl
                     }
                 ]
             },
@@ -54,8 +56,8 @@ export default {
             },
             {
                 id: "osm",
-                name: "OSM Related Services",
-                description: "Mapping technic training with OpenStreetMap, GIS operations and educational services.",
+                name: "OSM Educational Services",
+                description: "Mapping technic training with OpenStreetMap, and GIS educational services.",
                 items: []
             }
         ]

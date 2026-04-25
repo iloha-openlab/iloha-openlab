@@ -1,17 +1,19 @@
+import { common } from "./common";
+
 export default {
     company: {
-        nameJa: "ILOHAオープンラボ合同会社",
-        nameEn: "ILOHA OpenLab LLC",
-        tagline: "Engineering Open Ecosystems",
+        nameJa: common.nameJa,
+        nameEn: common.nameEn,
+        tagline: common.tagline,
         mission: "専門的支援と長期的コミットメントにより、Open SourceおよびOpen Dataの持続可能なエコシステムを支える。",
         brandStory: "「いろは」とは、物事の基礎を意味します。ILOHA OpenLab は、Open SourceおよびOpen Dataの持続可能性は、確かな基盤と基礎の上に成り立つと考えます。私たちはツールの導入にとどまらず、その基盤となる技術の強化に取り組みます。",
         legalForm: "合同会社",
         headOffice: "東京都北区赤羽一丁目7-9 赤羽第一葉山ビル4F",
         fiscalYear: "1月1日から12月31日",
-        contact: "contact@iloha-openlab.com",
-        linkedin: "https://www.linkedin.com/company/iloha-openlab/",
-        id: "1011503006903",
-        duns: "698863495",
+        contact: common.contact,
+        linkedin: common.linkedin,
+        id: common.id,
+        duns: common.duns,
         businessCategory: "ソフトウェア開発・OSS活用コンサルティング業",
         industrialClassification: "情報通信業／情報サービス業／ソフトウェア業 (G391)",
         mainBusiness: "翻訳支援・地理空間情報システムの導入支援・コンサルティング、オープンソースソフトウェア支援、自社ツール・プラグインの開発",
@@ -41,7 +43,7 @@ export default {
                     {
                         name: "OmegaT DeepL Plugin — Professional Edition",
                         description: "OmegaT用のフル機能DeepL API統合プラグインです。プロキシ認証、カスタム用語集管理、訳文の丁寧さ（formality）制御などの機能を提供します。",
-                        url: "https://iloha-openlab.lemonsqueezy.com"
+                        url: common.storeUrl
                     }
                 ]
             },
@@ -53,8 +55,8 @@ export default {
             },
             {
                 id: "osm",
-                name: "OSM関連サービス",
-                description: "OpenStreetMapを用いたマッピング技術トレーニング、GISオペレーション、教育サービスを提供します。",
+                name: "OSM教育サービス",
+                description: "OpenStreetMapを用いたマッピング技術トレーニング、GIS教育サービスを提供します。",
                 items: []
             }
         ]
