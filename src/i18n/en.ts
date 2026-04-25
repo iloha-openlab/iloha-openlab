@@ -29,9 +29,22 @@ export default {
     nav: {
         home: "Home",
         news: "News",
+        message: "Message",
         products: "Products & Services",
         privacy: "Privacy Policy",
         logoPolicy: "Logo Usage Policy",
+    },
+    message: {
+        title: "A Message from the Representative",
+        paragraphs: [
+            "Thank you for visiting the website of ILOHA OpenLab LLC. I'm Hiroshi Miura, the representative of the company.",
+            "The name \"ILOHA\" comes from the Japanese word iroha — meaning the fundamentals, the very beginning of things. We chose this name because it captures the essence of what we do.",
+            "Open Source Software and Open Data have become critical infrastructure for modern society. Yet their sustainability depends not just on visible features or convenience, but on whether the underlying technologies, communities, and structures are carefully and consistently nurtured.",
+            "Throughout my career as a member of the OSS community — contributing to development, localization, and education — I came to deeply appreciate the importance of foundational work, and the need for someone to take that work seriously over the long term. ILOHA OpenLab was founded with exactly that in mind.",
+            "We won't chase the flashy or the fleeting. Instead, we commit to working steadily, deeply, and with integrity — supporting the foundations of open ecosystems for the long haul. We hope you'll join us on that journey."
+        ],
+        representative: "Hiroshi Miura, Representative, ILOHA OpenLab LLC",
+        linkedin: "LinkedIn Profile"
     },
     products: {
         title: "Products & Services",
