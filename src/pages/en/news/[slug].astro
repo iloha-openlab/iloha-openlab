@@ -24,10 +24,6 @@ const t = getDictionary(lang);
   title={`${entry.data.title} | ${t.company.nameEn}`}
   description={entry.data.description}
 >
-  <nav>
-    <a href="/en/news/">{t.news.backToList}</a>
-  </nav>
-
   <article>
     <h1>{entry.data.title}</h1>
     <time datetime={entry.data.date.toISOString()}>

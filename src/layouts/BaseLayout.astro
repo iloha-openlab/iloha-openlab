@@ -1,7 +1,9 @@
 ---
 import "../styles/global.css"
 import logo from "../../public/images/logo.png";
+import { getDictionary } from "../i18n";
 const { title, description, lang } = Astro.props;
+const t = getDictionary(lang);
 ---
 
 <!doctype html>
@@ -26,7 +28,24 @@ const { title, description, lang } = Astro.props;
 
   <body>
     <div class="container">
-      <slot />
+      <header>
+        <div class="logo-container">
+          <a href={`/${lang}/`}>
+            <img src="/images/logo-horizontal.svg" alt={t.company.nameEn} class="logo" width="500" height="120" />
+          </a>
+        </div>
+        <nav>
+          <a href={`/${lang}/`}>{t.nav.home}</a> |
+          <a href={`/${lang}/news/`}>{t.nav.news}</a> |
+          <a href={`/${lang}/products/`}>{t.nav.products}</a> |
+          <a href={`/${lang}/privacy/`}>{t.nav.privacy}</a> |
+          <a href={`/${lang}/logo-policy/`}>{t.nav.logoPolicy}</a> |
+          <a href={lang === 'ja' ? '/en/' : '/ja/'}>{lang === 'ja' ? 'English' : '日本語'}</a>
+        </nav>
+      </header>
+      <main>
+        <slot />
+      </main>
     </div>
     <div id="cookie-banner" style="
     position:fixed;

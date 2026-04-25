@@ -18,13 +18,6 @@ newsEntries.sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
   title={`${t.news.title} | ${t.company.nameJa}`}
   description={t.news.title}
 >
-  <nav>
-    <a href="/ja/">{t.nav.home}</a> |
-    <a href="/ja/privacy/">{t.nav.privacy}</a> |
-    <a href="/ja/logo-policy/">{t.nav.logoPolicy}</a> |
-    <a href="/en/news/">English</a>
-  </nav>
-
   <h1>{t.news.title}</h1>
 
   <ul class="news-list">

@@ -13,15 +13,6 @@ const t = getDictionary(lang);
 >
   <h1>{t.products.title}</h1>
 
-  <nav>
-    <a href="/ja/">{t.nav.home}</a> |
-    <a href="/ja/news/">{t.nav.news}</a> |
-    <a href="/ja/products/">{t.nav.products}</a> |
-    <a href="/ja/privacy/">{t.nav.privacy}</a> |
-    <a href="/ja/logo-policy/">{t.nav.logoPolicy}</a> |
-    <a href="/en/products/">English</a>
-  </nav>
-
   <div class="tabs">
     <div class="tab-list" role="tablist">
       {t.products.categories.map((category, index) => (
