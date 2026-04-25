@@ -1,0 +1,117 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { getDictionary } from "../../i18n";
+
+const lang = "en";
+const t = getDictionary(lang);
+---
+
+<BaseLayout
+  lang={lang}
+  title={`${t.message.title} | ${t.company.nameEn}`}
+  description={`A message from Hiroshi Miura, Representative of ${t.company.nameEn}`}
+>
+  <div class="message-container">
+    <h1>{t.message.title}</h1>
+    
+    <div class="message-content">
+      <div class="message-image">
+        <img src="/images/portlait-stand-small.jpg" alt="Hiroshi Miura, Representative" />
+      </div>
+      
+      <div class="message-text">
+        {t.message.paragraphs.map(p => (
+          <p>{p}</p>
+        ))}
+        
+        <div class="representative-info">
+          <p class="name"><strong>{t.message.representative}</strong></p>
+          <p class="social-link">
+             <a href="https://www.linkedin.com/in/miurahr/" target="_blank" rel="noopener noreferrer">
+               <img src="/images/logo-horizontal-150.png" alt="LinkedIn" style="height: 1.2em; vertical-align: middle; margin-right: 0.5em;" />
+               {t.message.linkedin} ↗️
+             </a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</BaseLayout>
+
+<style>
+  .message-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem 0;
+  }
+  
+  h1 {
+    border-bottom: 2px solid #eee;
+    padding-bottom: 1rem;
+    margin-bottom: 2rem;
+  }
+  
+  .message-content {
+    display: flex;
+    gap: 3rem;
+    align-items: flex-start;
+  }
+  
+  .message-image {
+    flex: 0 0 250px;
+  }
+  
+  .message-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  }
+  
+  .message-text {
+    flex: 1;
+    line-height: 1.8;
+  }
+  
+  .message-text p {
+    margin-bottom: 1.5rem;
+  }
+  
+  .representative-info {
+    margin-top: 3rem;
+    text-align: right;
+  }
+  
+  .name {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .social-link a {
+    color: #0066cc;
+    text-decoration: none;
+    font-size: 0.95rem;
+  }
+  
+  .social-link a:hover {
+    text-decoration: underline;
+  }
+
+  @media (max-width: 768px) {
+    .message-content {
+      flex-direction: column;
+      gap: 2rem;
+    }
+    
+    .message-image {
+      flex: 0 0 auto;
+      width: 100%;
+      max-width: 300px;
+      margin: 0 auto;
+    }
+    
+    .representative-info {
+      text-align: left;
+    }
+  }
+</style>
