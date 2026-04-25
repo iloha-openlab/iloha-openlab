@@ -30,6 +30,24 @@ export default {
         privacy: "Privacy Policy",
         logoPolicy: "Logo Usage Policy",
     },
+    products: {
+        title: "Products & Services",
+        items: [
+            {
+                name: "OmegaT DeepL Plugin — Professional Edition",
+                description: "A fully-featured DeepL API integration for OmegaT, providing proxy authentication, custom glossary management, formality control, and more for professional translators and enterprise teams.",
+                url: "https://iloha-openlab.lemonsqueezy.com"
+            },
+            {
+                name: "OSS Consulting & Support",
+                description: "Technical consulting, implementation support, and custom development for open-source translation tools and geospatial systems."
+            },
+            {
+                name: "OSM training and text authoring",
+                description: "Mapping technic training with OpenStreetMap, GIS operations and educational services."
+            }
+        ]
+    },
 
     business: [
         "Provision of implementation support, maintenance, operational support, and consulting services for translation support software and related systems.",
