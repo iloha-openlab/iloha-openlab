@@ -48,8 +48,7 @@ export default {
                 { name: "GitHub", url: "https://github.com/miurahr" },
                 { name: "LinkedIn", url: "https://www.linkedin.com/in/miurahr/" },
                 { name: "Mastodon (OSM Town)", url: "https://en.osm.town/@miurahr" },
-                { name: "Liberapay", url: "https://liberapay.com/miurahr" },
-                { name: "Blog", url: "https://blogs.northside.tokyo/" }
+                { name: "Liberapay", url: "https://liberapay.com/miurahr" }
             ]
         },
         communities: {
