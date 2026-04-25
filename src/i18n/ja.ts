@@ -30,8 +30,50 @@ export default {
         news: "おしらせ",
         message: "ご挨拶",
         products: "商品・サービス",
+        activities: "活動紹介",
         privacy: "プライバシーポリシー",
         logoPolicy: "ロゴ使用規定",
+    },
+    activities: {
+        title: "代表の活動紹介",
+        description: "代表・三浦広志のオープンソースコミュニティにおける活動や公開コンテンツを紹介します。",
+        items: [
+            {
+                title: "Note (miurahr)",
+                url: "https://note.com/miurahr",
+                description: "Containerd/nerdctlの日本語マニュアル翻訳や、OmegaTの初心者向けガイドなどを公開しています。",
+            },
+            {
+                title: "GitHub (miurahr)",
+                url: "https://github.com/miurahr",
+                description: "多くのリポジトリを公開しており、GitHub A+ランクの評価を得ています。",
+            },
+            {
+                title: "HackMD OmegaT Project",
+                url: "https://hackmd.io/@omegat",
+                description: "OmegaTのドキュメンテーションプロジェクトをリードしています。",
+            },
+            {
+                title: "OmegaT Project",
+                url: "https://www.omegat.org/",
+                description: "オープンソースの翻訳支援ツールOmegaTのLead Developerを務めています。",
+            },
+            {
+                title: "OpenStreetMap Foundation Japan",
+                url: "https://www.osmf.jp/",
+                description: "OpenStreetMapの普及を支援する一般社団法人オープンストリートマップ・ファウンデーション・ジャパンの活動に参画しています。",
+            },
+            {
+                title: "ResearchGate (Hiroshi Miura)",
+                url: "https://www.researchgate.net/profile/Hiroshi-Miura-2",
+                description: "研究業績や公開論文などを掲載しているResearchGateのプロフィールページです。",
+            },
+            {
+                title: "SlideShare (miurahr)",
+                url: "https://www.slideshare.net/miurahr",
+                description: "各種カンファレンスや勉強会での発表資料を公開しています。",
+            }
+        ]
     },
     message: {
         title: "ご挨拶",

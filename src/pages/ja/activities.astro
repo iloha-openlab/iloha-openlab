@@ -1,0 +1,105 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { getDictionary } from "../../i18n";
+
+const lang = "ja";
+const t = getDictionary(lang);
+---
+
+<BaseLayout
+  lang={lang}
+  title={`${t.activities.title} | ${t.company.nameEn}`}
+  description={t.activities.description}
+>
+  <div class="activities-container">
+    <h1>{t.activities.title}</h1>
+    <p class="description">{t.activities.description}</p>
+    
+    <div class="activities-grid">
+      {t.activities.items.map(item => (
+        <section class="activity-card">
+          <div class="activity-content">
+            <h2>{item.title}</h2>
+            <p>{item.description}</p>
+            <a href={item.url} target="_blank" rel="noopener noreferrer" class="link">
+              詳細を見る ↗️
+            </a>
+          </div>
+        </section>
+      ))}
+    </div>
+  </div>
+</BaseLayout>
+
+<style>
+  .activities-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2rem 0;
+  }
+  
+  h1 {
+    border-bottom: 2px solid #eee;
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .description {
+    margin-bottom: 3rem;
+    font-size: 1.1rem;
+    color: #555;
+  }
+  
+  .activities-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+  
+  .activity-card {
+    border: 1px solid #eee;
+    padding: 1.5rem;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s ease;
+  }
+
+  .activity-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  }
+  
+  .activity-content h2 {
+    margin-top: 0;
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    color: #333;
+  }
+  
+  .activity-content p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    color: #444;
+  }
+  
+  .link {
+    display: inline-block;
+    color: #0066cc;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: auto;
+  }
+  
+  .link:hover {
+    text-decoration: underline;
+  }
+
+  @media (max-width: 768px) {
+    .activities-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

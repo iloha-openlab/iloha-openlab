@@ -31,8 +31,50 @@ export default {
         news: "News",
         message: "Message",
         products: "Products & Services",
+        activities: "Activities",
         privacy: "Privacy Policy",
         logoPolicy: "Logo Usage Policy",
+    },
+    activities: {
+        title: "Representative's Activities",
+        description: "Introduction to activities and public contents in the open source community by Hiroshi Miura, Representative.",
+        items: [
+            {
+                title: "Note (miurahr)",
+                url: "https://note.com/miurahr",
+                description: "Publishes Japanese translations of Containerd/nerdctl manuals and OmegaT beginner's guides.",
+            },
+            {
+                title: "GitHub (miurahr)",
+                url: "https://github.com/miurahr",
+                description: "Maintains many repositories and is rated as GitHub A+ rank.",
+            },
+            {
+                title: "HackMD OmegaT Project",
+                url: "https://hackmd.io/@omegat",
+                description: "Leading the OmegaT documentation project.",
+            },
+            {
+                title: "OmegaT Project",
+                url: "https://www.omegat.org/",
+                description: "Lead Developer of OmegaT, an open-source computer-aided translation tool.",
+            },
+            {
+                title: "OpenStreetMap Foundation Japan",
+                url: "https://www.osmf.jp/",
+                description: "Participating in the activities of OpenStreetMap Foundation Japan to support the promotion of OpenStreetMap.",
+            },
+            {
+                title: "ResearchGate (Hiroshi Miura)",
+                url: "https://www.researchgate.net/profile/Hiroshi-Miura-2",
+                description: "ResearchGate profile page showcasing research achievements and publications.",
+            },
+            {
+                title: "SlideShare (miurahr)",
+                url: "https://www.slideshare.net/miurahr",
+                description: "Presentation materials from various conferences and meetups.",
+            }
+        ]
     },
     message: {
         title: "A Message from the Representative",
