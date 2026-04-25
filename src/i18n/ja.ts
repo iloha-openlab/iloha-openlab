@@ -30,8 +30,136 @@ export default {
         news: "おしらせ",
         message: "ご挨拶",
         products: "商品・サービス",
+        activities: "活動紹介",
         privacy: "プライバシーポリシー",
         logoPolicy: "ロゴ使用規定",
+    },
+    activities: {
+        title: "代表の活動紹介",
+        lead: "このページでは、代表社員・三浦広志の個人としてのオープンソース・オープンデータ活動を紹介します。ILOHAオープンラボは、こうした継続的なコミュニティ活動と技術的蓄積を基盤として設立されました。",
+        profile: {
+            title: "プロフィール概要",
+            name: "三浦 広志 / Hiroshi Miura",
+            position: "ILOHAオープンラボ合同会社 代表社員",
+            communityPosition: "一般社団法人 OpenStreetMap Foundation Japan 代表理事",
+            specialties: "OSSエコシステム支援、翻訳支援ツール、地理空間情報システム、Pythonライブラリ開発",
+            links: [
+                { name: "Codeberg", url: "https://codeberg.org/miurahr" },
+                { name: "GitHub", url: "https://github.com/miurahr" },
+                { name: "LinkedIn", url: "https://www.linkedin.com/in/miurahr/" },
+                { name: "Mastodon (OSM Town)", url: "https://en.osm.town/@miurahr" },
+                { name: "Liberapay", url: "https://liberapay.com/miurahr" }
+            ]
+        },
+        communities: {
+            title: "コミュニティ役職",
+            items: [
+                {
+                    name: "一般社団法人 OpenStreetMap Foundation Japan (OSMFJ)",
+                    role: "代表理事 (Executive Director)",
+                    description: "日本のOpenStreetMapコミュニティを代表する非営利法人"
+                },
+                {
+                    name: "OmegaT プロジェクト",
+                    role: "プロジェクトリード・コアコントリビューター",
+                    description: "GNU GPL ライセンスのフリーソフトウェアCAT（コンピュータ支援翻訳）ツール"
+                },
+                {
+                    name: "WeeklyOSM",
+                    role: "編集・翻訳ボランティア（英語・日本語）",
+                    description: "OpenStreetMapコミュニティの動向を伝える国際週刊ニュースメディア"
+                }
+            ]
+        },
+        projects: {
+            title: "自作・主要メンテナンスOSSプロジェクト",
+            items: [
+                {
+                    name: "pykakasi",
+                    role: "作者・メンテナー",
+                    description: "日本語（漢字・かな）をローマ字に変換するPython NLPライブラリ",
+                    url: "https://codeberg.org/miurahr/pykakasi"
+                },
+                {
+                    name: "py7zr",
+                    role: "作者・メンテナー",
+                    description: "Python製7zipアーカイブ実装。LZMA2・ZStd・PPMd等の圧縮アルゴリズムに対応",
+                    url: "https://github.com/miurahr/py7zr"
+                },
+                {
+                    name: "omegat-textra-plugin",
+                    role: "作者",
+                    description: "OmegaT向けNICT TexTra機械翻訳APIプラグイン",
+                    url: "https://github.com/miurahr/omegat-textra-plugin"
+                },
+                {
+                    name: "gradle-omegat-plugin",
+                    role: "作者",
+                    description: "OmegaT翻訳メモリをGradleビルドに統合するプラグイン",
+                    url: "https://codeberg.org/miurahr/gradle-omegat-plugin"
+                },
+                {
+                    name: "unihandecode",
+                    role: "メンテナー",
+                    description: "Unicode文字をASCIIへ変換する多言語対応ライブラリ",
+                    url: "https://codeberg.org/miurahr/unihandecode"
+                },
+                {
+                    name: "pyppmd",
+                    role: "作者",
+                    description: "PPM（Prediction by Partial Matching）圧縮アルゴリズムのPython実装",
+                    url: "https://github.com/miurahr/pyppmd"
+                },
+                {
+                    name: "inflate64",
+                    role: "作者",
+                    description: "Enhanced Deflate（Deflate64）アルゴリズムのPython実装",
+                    url: "https://github.com/miurahr/inflate64"
+                }
+            ]
+        },
+        contributions: {
+            title: "コントリビューション実績",
+            text: "Linux カーネル、OmegaT、GDAL、OpenStreetMap エディタ（JOSM等）、LibreOffice をはじめ、数百のオープンソースプロジェクトにコントリビューションしています。"
+        },
+        awards: {
+            title: "主な受賞・表彰",
+            items: [
+                {
+                    title: "ICT推進月間委員会 会長賞（情報システム優良賞）（2011年）",
+                    description: "震災支援プラットフォーム Sinsai.info プロジェクトへの貢献"
+                },
+                {
+                    title: "Financial Use Case Working Group リーダーシップ表彰",
+                    description: "MUFGとの共同白書プロジェクトにおけるワーキンググループ調整と白書執筆への貢献"
+                }
+            ]
+        },
+        legacyItems: {
+            title: "その他の活動・外部リンク",
+            items: [
+                {
+                    title: "Note (miurahr)",
+                    url: "https://note.com/miurahr",
+                    description: "Containerd/nerdctlの日本語マニュアル翻訳や、OmegaTの初心者向けガイドなどを公開しています。",
+                },
+                {
+                    title: "HackMD OmegaT Project",
+                    url: "https://hackmd.io/@omegat",
+                    description: "OmegaTのドキュメンテーションプロジェクトをリードしています。",
+                },
+                {
+                    title: "ResearchGate (Hiroshi Miura)",
+                    url: "https://www.researchgate.net/profile/Hiroshi-Miura-2",
+                    description: "研究業績や公開論文などを掲載しているResearchGateのプロフィールページです。",
+                },
+                {
+                    title: "SlideShare (miurahr)",
+                    url: "https://www.slideshare.net/miurahr",
+                    description: "各種カンファレンスや勉強会での発表資料を公開しています。",
+                }
+            ]
+        }
     },
     message: {
         title: "ご挨拶",
