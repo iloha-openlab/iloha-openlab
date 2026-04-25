@@ -28,6 +28,7 @@ const recentNews = newsEntries.slice(0, 3);
   <nav>
     <a href="/en/">{t.nav.home}</a> |
     <a href="/en/news/">{t.nav.news}</a> |
+    <a href="/en/products/">{t.nav.products}</a> |
     <a href="/en/privacy/">{t.nav.privacy}</a> |
     <a href="/en/logo-policy/">{t.nav.logoPolicy}</a> |
     <a href="/ja/">日本語</a>
@@ -54,13 +55,16 @@ const recentNews = newsEntries.slice(0, 3);
 
   <section class="products">
     <h2>{t.products.title}</h2>
-    {t.products.items.map(item => (
-      <div class="product-item">
-        <h3>{item.name}</h3>
-        <p>{item.description}</p>
-        {item.url && <p>Available at: <a href={item.url} target="_blank" rel="noopener noreferrer">{item.url}</a></p>}
-      </div>
-    ))}
+    <div class="product-summary">
+      {t.products.categories.map(category => (
+        <div class="product-category-excerpt">
+          <h3>{category.name}</h3>
+          <p>{category.description}</p>
+          <a href={`/en/products/#${category.id}`}>Read more...</a>
+        </div>
+      ))}
+    </div>
+    <p><a href="/en/products/">All products and services...</a></p>
   </section>
 
   <section class="brand-story">
@@ -109,10 +113,10 @@ const recentNews = newsEntries.slice(0, 3);
     font-size: 0.9rem;
     margin-right: 1rem;
   }
-  .product-item {
-    margin-bottom: 2rem;
+  .product-category-excerpt {
+    margin-bottom: 1.5rem;
   }
-  .product-item h3 {
+  .product-category-excerpt h3 {
     margin-bottom: 0.5rem;
   }
 </style>

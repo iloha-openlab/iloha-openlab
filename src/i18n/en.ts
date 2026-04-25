@@ -27,24 +27,36 @@ export default {
     nav: {
         home: "Home",
         news: "News",
+        products: "Products & Services",
         privacy: "Privacy Policy",
         logoPolicy: "Logo Usage Policy",
     },
     products: {
         title: "Products & Services",
-        items: [
+        categories: [
             {
-                name: "OmegaT DeepL Plugin — Professional Edition",
-                description: "A fully-featured DeepL API integration for OmegaT, providing proxy authentication, custom glossary management, formality control, and more for professional translators and enterprise teams.",
-                url: "https://iloha-openlab.lemonsqueezy.com"
+                id: "omegat",
+                name: "OmegaT Related Products",
+                description: "We provide plugins and related tools to extend OmegaT's functionality.",
+                items: [
+                    {
+                        name: "OmegaT DeepL Plugin — Professional Edition",
+                        description: "A fully-featured DeepL API integration for OmegaT, providing proxy authentication, custom glossary management, formality control, and more for professional translators and enterprise teams.",
+                        url: "https://iloha-openlab.lemonsqueezy.com"
+                    }
+                ]
             },
             {
-                name: "OSS Consulting & Support",
-                description: "Technical consulting, implementation support, and custom development for open-source translation tools and geospatial systems."
+                id: "oss",
+                name: "OSS Consulting Services",
+                description: "Technical consulting, implementation support, and custom development for open-source translation tools and geospatial systems.",
+                items: []
             },
             {
-                name: "OSM training and text authoring",
-                description: "Mapping technic training with OpenStreetMap, GIS operations and educational services."
+                id: "osm",
+                name: "OSM Related Services",
+                description: "Mapping technic training with OpenStreetMap, GIS operations and educational services.",
+                items: []
             }
         ]
     },
