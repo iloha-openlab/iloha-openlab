@@ -14,6 +14,7 @@ export default {
         contact: common.contact,
         linkedin: common.linkedin,
         id: common.id,
+        corporateNumberUrl: `https://www.houjin-bangou.nta.go.jp/en/henkorireki-johoto.html?selHouzinNo=${common.id}`,
         duns: common.duns,
         businessCategory: "Software development and OSS consulting services",
         industrialClassification: "Information and communications / Information services / Software (G391)",
