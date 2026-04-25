@@ -4,30 +4,122 @@ import { getDictionary } from "../../i18n";
 
 const lang = "en";
 const t = getDictionary(lang);
+const act = t.activities;
 ---
 
 <BaseLayout
   lang={lang}
-  title={`${t.activities.title} | ${t.company.nameEn}`}
-  description={t.activities.description}
+  title={`${act.title} | ${t.company.nameEn}`}
+  description={act.lead}
 >
   <div class="activities-container">
-    <h1>{t.activities.title}</h1>
-    <p class="description">{t.activities.description}</p>
+    <h1>{act.title}</h1>
     
-    <div class="activities-grid">
-      {t.activities.items.map(item => (
-        <section class="activity-card">
-          <div class="activity-content">
-            <h2>{item.title}</h2>
+    <!-- Section A: Lead Text -->
+    <section class="lead-section">
+      <p>{act.lead}</p>
+    </section>
+
+    <!-- Section B: Profile Overview -->
+    <section class="profile-section">
+      <h2>{act.profile.title}</h2>
+      <div class="profile-grid">
+        <div class="profile-table">
+          <table>
+            <tr><th>Name</th><td>{act.profile.name}</td></tr>
+            <tr><th>Title (Corporate)</th><td>{act.profile.position}</td></tr>
+            <tr><th>Community Title</th><td>{act.profile.communityPosition}</td></tr>
+            <tr><th>Core Expertise</th><td>{act.profile.specialties}</td></tr>
+          </table>
+        </div>
+        <div class="profile-links">
+          <h3>External Profiles</h3>
+          <ul>
+            {act.profile.links.map(link => (
+              <li>
+                <a href={link.url} target="_blank" rel="noopener noreferrer">
+                  {link.name} ↗
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section C: Community Roles -->
+    <section class="community-section">
+      <h2>{act.communities.title}</h2>
+      <div class="item-list">
+        {act.communities.items.map(item => (
+          <div class="item-card">
+            <h3>{item.name}</h3>
+            <p class="role"><strong>Role: {item.role}</strong></p>
             <p>{item.description}</p>
-            <a href={item.url} target="_blank" rel="noopener noreferrer" class="link">
-              View details ↗️
-            </a>
           </div>
-        </section>
-      ))}
-    </div>
+        ))}
+      </div>
+    </section>
+
+    <!-- Section D: OSS Projects -->
+    <section class="projects-section">
+      <h2>{act.projects.title}</h2>
+      <div class="table-container">
+        <table class="project-table">
+          <thead>
+            <tr>
+              <th>Project Name</th>
+              <th>Role</th>
+              <th>Overview</th>
+              <th>Link</th>
+            </tr>
+          </thead>
+          <tbody>
+            {act.projects.items.map(item => (
+              <tr>
+                <td><strong>{item.name}</strong></td>
+                <td>{item.role}</td>
+                <td>{item.description}</td>
+                <td><a href={item.url} target="_blank" rel="noopener noreferrer">Link ↗</a></td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Section E: Contributions -->
+    <section class="contributions-section">
+      <h2>{act.contributions.title}</h2>
+      <p>{act.contributions.text}</p>
+    </section>
+
+    <!-- Section F: Awards & Recognitions -->
+    <section class="awards-section">
+      <h2>{act.awards.title}</h2>
+      <div class="item-list">
+        {act.awards.items.map(item => (
+          <div class="item-card">
+            <h3>{item.title}</h3>
+            <p>{item.description}</p>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <!-- Additional: Legacy/Other Items -->
+    <section class="legacy-section">
+      <h2>{act.legacyItems.title}</h2>
+      <div class="legacy-grid">
+        {act.legacyItems.items.map(item => (
+          <div class="legacy-card">
+            <h3>{item.title}</h3>
+            <p>{item.description}</p>
+            <a href={item.url} target="_blank" rel="noopener noreferrer">Details ↗</a>
+          </div>
+        ))}
+      </div>
+    </section>
   </div>
 </BaseLayout>
 
@@ -39,67 +131,167 @@ const t = getDictionary(lang);
   }
   
   h1 {
-    border-bottom: 2px solid #eee;
+    border-bottom: 2px solid #333;
     padding-bottom: 1rem;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
   }
 
-  .description {
-    margin-bottom: 3rem;
-    font-size: 1.1rem;
-    color: #555;
-  }
-  
-  .activities-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-  }
-  
-  .activity-card {
-    border: 1px solid #eee;
-    padding: 1.5rem;
-    border-radius: 8px;
-    background-color: #f9f9f9;
-    display: flex;
-    flex-direction: column;
-    transition: transform 0.2s ease;
-  }
-
-  .activity-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-  }
-  
-  .activity-content h2 {
-    margin-top: 0;
-    font-size: 1.3rem;
-    margin-bottom: 1rem;
-    color: #333;
-  }
-  
-  .activity-content p {
-    font-size: 0.95rem;
-    line-height: 1.6;
+  h2 {
+    border-left: 5px solid #0066cc;
+    padding-left: 1rem;
+    margin-top: 3rem;
     margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+  }
+
+  section {
+    margin-bottom: 3rem;
+  }
+
+  .lead-section p {
+    font-size: 1.1rem;
+    line-height: 1.8;
     color: #444;
   }
-  
-  .link {
-    display: inline-block;
+
+  .profile-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2rem;
+    background: #f9f9f9;
+    padding: 1.5rem;
+    border-radius: 8px;
+  }
+
+  .profile-table table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  .profile-table th, .profile-table td {
+    text-align: left;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid #eee;
+  }
+
+  .profile-table th {
+    width: 30%;
+    color: #666;
+    font-weight: normal;
+  }
+
+  .profile-links h3 {
+    margin-top: 0;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+  }
+
+  .profile-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .profile-links li {
+    margin-bottom: 0.5rem;
+  }
+
+  .profile-links a {
     color: #0066cc;
     text-decoration: none;
-    font-weight: bold;
-    margin-top: auto;
   }
-  
-  .link:hover {
+
+  .profile-links a:hover {
     text-decoration: underline;
   }
 
+  .item-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .item-card {
+    border: 1px solid #eee;
+    padding: 1.5rem;
+    border-radius: 8px;
+    background-color: #fff;
+  }
+
+  .item-card h3 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+  }
+
+  .item-card .role {
+    color: #0066cc;
+    margin-bottom: 0.5rem;
+  }
+
+  .table-container {
+    overflow-x: auto;
+  }
+
+  .project-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.95rem;
+  }
+
+  .project-table th, .project-table td {
+    border: 1px solid #eee;
+    padding: 0.75rem;
+    text-align: left;
+  }
+
+  .project-table th {
+    background-color: #f5f5f5;
+    font-weight: bold;
+  }
+
+  .project-table a {
+    color: #0066cc;
+    text-decoration: none;
+  }
+
+  .legacy-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .legacy-card {
+    border: 1px solid #eee;
+    padding: 1.2rem;
+    border-radius: 8px;
+    background-color: #fcfcfc;
+  }
+
+  .legacy-card h3 {
+    font-size: 1.1rem;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+  }
+
+  .legacy-card p {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 1rem;
+  }
+
+  .legacy-card a {
+    color: #0066cc;
+    font-weight: bold;
+    text-decoration: none;
+  }
+
   @media (max-width: 768px) {
-    .activities-grid {
+    .profile-grid {
       grid-template-columns: 1fr;
+    }
+    .project-table th, .project-table td {
+      padding: 0.5rem;
     }
   }
 </style>

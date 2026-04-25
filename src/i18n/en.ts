@@ -37,44 +37,131 @@ export default {
     },
     activities: {
         title: "Representative's Activities",
-        description: "Introduction to activities and public contents in the open source community by Hiroshi Miura, Representative.",
-        items: [
-            {
-                title: "Note (miurahr)",
-                url: "https://note.com/miurahr",
-                description: "Publishes Japanese translations of Containerd/nerdctl manuals and OmegaT beginner's guides.",
-            },
-            {
-                title: "GitHub (miurahr)",
-                url: "https://github.com/miurahr",
-                description: "Maintains many repositories and is rated as GitHub A+ rank.",
-            },
-            {
-                title: "HackMD OmegaT Project",
-                url: "https://hackmd.io/@omegat",
-                description: "Leading the OmegaT documentation project.",
-            },
-            {
-                title: "OmegaT Project",
-                url: "https://www.omegat.org/",
-                description: "Lead Developer of OmegaT, an open-source computer-aided translation tool.",
-            },
-            {
-                title: "OpenStreetMap Foundation Japan",
-                url: "https://www.osmf.jp/",
-                description: "Participating in the activities of OpenStreetMap Foundation Japan to support the promotion of OpenStreetMap.",
-            },
-            {
-                title: "ResearchGate (Hiroshi Miura)",
-                url: "https://www.researchgate.net/profile/Hiroshi-Miura-2",
-                description: "ResearchGate profile page showcasing research achievements and publications.",
-            },
-            {
-                title: "SlideShare (miurahr)",
-                url: "https://www.slideshare.net/miurahr",
-                description: "Presentation materials from various conferences and meetups.",
-            }
-        ]
+        lead: "This page introduces the personal open-source and open-data activities of Hiroshi Miura, Representative of ILOHA OpenLab LLC. ILOHA OpenLab was founded on the foundation of this long-term community involvement and technical expertise.",
+        profile: {
+            title: "Profile Overview",
+            name: "Hiroshi Miura",
+            position: "Representative, ILOHA OpenLab LLC",
+            communityPosition: "Executive Director, OpenStreetMap Foundation Japan",
+            specialties: "OSS Ecosystem Support, Translation Tools, Geospatial Information Systems, Python Library Development",
+            links: [
+                { name: "Codeberg", url: "https://codeberg.org/miurahr" },
+                { name: "GitHub", url: "https://github.com/miurahr" },
+                { name: "LinkedIn", url: "https://www.linkedin.com/in/miurahr/" },
+                { name: "Mastodon (OSM Town)", url: "https://en.osm.town/@miurahr" },
+                { name: "Liberapay", url: "https://liberapay.com/miurahr" },
+                { name: "Blog", url: "https://blogs.northside.tokyo/" }
+            ]
+        },
+        communities: {
+            title: "Community Roles",
+            items: [
+                {
+                    name: "OpenStreetMap Foundation Japan (OSMFJ)",
+                    role: "Executive Director",
+                    description: "A non-profit organization representing the OpenStreetMap community in Japan."
+                },
+                {
+                    name: "OmegaT Project",
+                    role: "Project Lead & Core Contributor",
+                    description: "Free software CAT (Computer-Aided Translation) tool under the GNU GPL license."
+                },
+                {
+                    name: "WeeklyOSM",
+                    role: "Editor/Translator (English/Japanese)",
+                    description: "International weekly news outlet reporting on the OpenStreetMap community."
+                }
+            ]
+        },
+        projects: {
+            title: "Original & Maintained OSS Projects",
+            items: [
+                {
+                    name: "pykakasi",
+                    role: "Author & Maintainer",
+                    description: "Python NLP library for converting Japanese text (Kanji/Kana) to Romaji.",
+                    url: "https://codeberg.org/miurahr/pykakasi"
+                },
+                {
+                    name: "py7zr",
+                    role: "Author & Maintainer",
+                    description: "Python implementation of 7zip archive. Supports LZMA2, ZStd, PPMd, etc.",
+                    url: "https://github.com/miurahr/py7zr"
+                },
+                {
+                    name: "omegat-textra-plugin",
+                    role: "Author",
+                    description: "NICT TexTra machine translation API plugin for OmegaT.",
+                    url: "https://github.com/miurahr/omegat-textra-plugin"
+                },
+                {
+                    name: "gradle-omegat-plugin",
+                    role: "Author",
+                    description: "Plugin to integrate OmegaT translation memory into Gradle builds.",
+                    url: "https://codeberg.org/miurahr/gradle-omegat-plugin"
+                },
+                {
+                    name: "unihandecode",
+                    role: "Maintainer",
+                    description: "Multilingual library to decode Unicode characters to ASCII.",
+                    url: "https://codeberg.org/miurahr/unihandecode"
+                },
+                {
+                    name: "pyppmd",
+                    role: "Author",
+                    description: "Python implementation of PPM (Prediction by Partial Matching) compression algorithm.",
+                    url: "https://github.com/miurahr/pyppmd"
+                },
+                {
+                    name: "inflate64",
+                    role: "Author",
+                    description: "Python implementation of Enhanced Deflate (Deflate64) algorithm.",
+                    url: "https://github.com/miurahr/inflate64"
+                }
+            ]
+        },
+        contributions: {
+            title: "Contribution Highlights",
+            text: "Contributed to hundreds of open-source projects, including the Linux kernel, OmegaT, GDAL, OpenStreetMap editors (JOSM and others), and LibreOffice."
+        },
+        awards: {
+            title: "Awards & Recognitions",
+            items: [
+                {
+                    title: "ICT Promotion Month Committee Chairman's Award (2011)",
+                    description: "For contributions to the earthquake disaster support platform Sinsai.info project."
+                },
+                {
+                    title: "Financial Use Case Working Group Leadership Award",
+                    description: "For contributions to working group coordination and white paper authorship in the joint white paper project with MUFG."
+                }
+            ]
+        },
+        legacyItems: {
+            title: "Other Activities & External Links",
+            items: [
+                {
+                    title: "Note (miurahr)",
+                    url: "https://note.com/miurahr",
+                    description: "Publishes Japanese translations of Containerd/nerdctl manuals and OmegaT beginner's guides.",
+                },
+                {
+                    title: "HackMD OmegaT Project",
+                    url: "https://hackmd.io/@omegat",
+                    description: "Leading the OmegaT documentation project.",
+                },
+                {
+                    title: "ResearchGate (Hiroshi Miura)",
+                    url: "https://www.researchgate.net/profile/Hiroshi-Miura-2",
+                    description: "ResearchGate profile page showcasing research achievements and publications.",
+                },
+                {
+                    title: "SlideShare (miurahr)",
+                    url: "https://www.slideshare.net/miurahr",
+                    description: "Presentation materials from various conferences and meetups.",
+                }
+            ]
+        }
     },
     message: {
         title: "A Message from the Representative",
