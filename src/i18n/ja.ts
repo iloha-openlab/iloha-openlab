@@ -84,7 +84,7 @@ export default {
                     name: "pykakasi",
                     role: "作者・メンテナー",
                     description: "日本語（漢字・かな）をローマ字に変換するPython NLPライブラリ",
-                    url: "https://codeberg.org/miurahr/pykakasi"
+                    url: "https://github.com/miurahr/pykakasi"
                 },
                 {
                     name: "py7zr",
@@ -108,7 +108,7 @@ export default {
                     name: "unihandecode",
                     role: "メンテナー",
                     description: "Unicode文字をASCIIへ変換する多言語対応ライブラリ",
-                    url: "https://codeberg.org/miurahr/unihandecode"
+                    url: "https://github.com/miurahr/unihandecode"
                 },
                 {
                     name: "pyppmd",

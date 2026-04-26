@@ -85,7 +85,7 @@ export default {
                     name: "pykakasi",
                     role: "Author & Maintainer",
                     description: "Python NLP library for converting Japanese text (Kanji/Kana) to Romaji.",
-                    url: "https://codeberg.org/miurahr/pykakasi"
+                    url: "https://github.com/miurahr/pykakasi"
                 },
                 {
                     name: "py7zr",
@@ -109,7 +109,7 @@ export default {
                     name: "unihandecode",
                     role: "Maintainer",
                     description: "Multilingual library to decode Unicode characters to ASCII.",
-                    url: "https://codeberg.org/miurahr/unihandecode"
+                    url: "https://github.com/miurahr/unihandecode"
                 },
                 {
                     name: "pyppmd",
