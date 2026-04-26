@@ -54,7 +54,10 @@ const act = t.activities;
         {act.communities.items.map(item => (
           <div class="item-card">
             <h3>{item.name}</h3>
-            <p class="role"><strong>役職: {item.role}</strong></p>
+            <p class="role">
+              <strong>役職: {item.role}</strong>
+              {(item as any).period && <span class="period"> ({(item as any).period})</span>}
+            </p>
             <p>{item.description}</p>
           </div>
         ))}
@@ -102,6 +105,20 @@ const act = t.activities;
           <div class="item-card">
             <h3>{item.title}</h3>
             <p>{item.description}</p>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <!-- セクション G: 著書・翻訳 -->
+    <section class="publications-section">
+      <h2>{act.publications.title}</h2>
+      <div class="item-list">
+        {act.publications.items.map(item => (
+          <div class="item-card">
+            <h3>{item.title}</h3>
+            <p class="role"><strong>役割: {item.role}</strong></p>
+            <p>{item.publisher} ({item.year})</p>
           </div>
         ))}
       </div>
@@ -227,6 +244,12 @@ const act = t.activities;
   .item-card .role {
     color: #0066cc;
     margin-bottom: 0.5rem;
+  }
+
+  .item-card .period {
+    color: #666;
+    font-size: 0.9rem;
+    font-weight: normal;
   }
 
   .table-container {

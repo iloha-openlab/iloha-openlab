@@ -54,11 +54,18 @@ export default {
             ]
         },
         communities: {
-            title: "Community Roles",
+            title: "Community & Educational Activities",
             items: [
+                {
+                    name: "Kobe Institute of Computing (KIC)",
+                    role: "Adjunct Professor",
+                    period: "Apr 2005 – Mar 2008",
+                    description: "Lecturing on Operating Systems and Open Source Software (e.g., Linux kernel)."
+                },
                 {
                     name: "Aoyama Gakuin University, School of Global Studies and Collaboration (GSC)",
                     role: "Part-time Lecturer",
+                    period: "2018 – Present",
                     description: "Teaching courses related to open source and geospatial information."
                 },
                 {
@@ -133,12 +140,33 @@ export default {
             title: "Awards & Recognitions",
             items: [
                 {
-                    title: "ICT Promotion Month Committee Chairman's Award (2011)",
+                    title: "Chairman's Award of the Information Promotion Month Promotion Council (2011)",
                     description: "For contributions to the earthquake disaster support platform Sinsai.info project."
+                },
+                {
+                    title: "Japan Cartographers Association Special Award (2018)",
+                    description: "Awarded to OSMFJ for contributions to citizen-participatory mapping through OpenStreetMap."
                 },
                 {
                     title: "Financial Use Case Working Group Contribution Award (IOWN Global Forum, 2025)",
                     description: "For contributions to working group coordination and white paper authorship in the joint white paper project with MUFG."
+                }
+            ]
+        },
+        publications: {
+            title: "Books & Translations",
+            items: [
+                {
+                    title: "Infrastructure Design Patterns: 127 Design Methods for Stable Operation",
+                    publisher: "Gihyo Publishing",
+                    year: "2014",
+                    role: "Co-author"
+                },
+                {
+                    title: "Understanding the Linux Kernel, 1st Edition",
+                    publisher: "O'Reilly Japan",
+                    year: "2001",
+                    role: "Translator (Co-translator)"
                 }
             ]
         },

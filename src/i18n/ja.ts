@@ -53,11 +53,18 @@ export default {
             ]
         },
         communities: {
-            title: "コミュニティ役職",
+            title: "コミュニティ・教育活動",
             items: [
+                {
+                    name: "神戸情報大学院大学 (Kobe Institute of Computing)",
+                    role: "非常勤講師 (Adjunct Professor)",
+                    period: "2005年4月 – 2008年3月",
+                    description: "オペレーティングシステム、オープンソースソフトウェア（Linuxカーネル等）の講義を担当"
+                },
                 {
                     name: "青山学院大学 地球社会共生学部 (GSC)",
                     role: "非常勤講師",
+                    period: "2018年 – 現在",
                     description: "オープンソースや地理空間情報に関する教育を担当"
                 },
                 {
@@ -132,12 +139,33 @@ export default {
             title: "主な受賞・表彰",
             items: [
                 {
-                    title: "ICT推進月間委員会 会長賞（情報システム優良賞）（2011年）",
-                    description: "震災支援プラットフォーム Sinsai.info プロジェクトへの貢献"
+                    title: "情報化月間推進会議 議長賞（情報システム優良賞）（2011年）",
+                    description: "震災支援プラットフォーム Sinsai.info プロジェクトの貢献"
+                },
+                {
+                    title: "第12回（平成30年度）日本地図学会特別賞（2018年）",
+                    description: "OpenStreetMapを通じた市民参加による地図作りへの貢献（OSMFJとして受賞）"
                 },
                 {
                     title: "Financial Use Case Working Group 貢献表彰（IOWNグローバルフォーラム、2025年）",
                     description: "MUFGとの共同白書プロジェクトにおけるワーキンググループ調整と白書執筆への貢献"
+                }
+            ]
+        },
+        publications: {
+            title: "著書・翻訳",
+            items: [
+                {
+                    title: "インフラデザインパターン－安定稼動に導く127の設計方式－",
+                    publisher: "技術評論社",
+                    year: "2014年",
+                    role: "共著者"
+                },
+                {
+                    title: "詳解Linuxカーネル第1版",
+                    publisher: "オライリー・ジャパン",
+                    year: "2001年",
+                    role: "訳者（一部担当）"
                 }
             ]
         },
