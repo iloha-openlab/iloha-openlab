@@ -185,7 +185,8 @@ export default {
                     {
                         name: "OmegaT DeepL Plugin — Professional Edition",
                         description: "OmegaT用のフル機能DeepL API統合プラグインです。プロキシ認証、カスタム用語集管理、訳文の丁寧さ（formality）制御などの機能を提供します。",
-                        url: common.storeUrl
+                        // url: common.storeUrl
+                        status: "開発中（12月末提供予定）"
                     }
                 ]
             },

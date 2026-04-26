@@ -186,7 +186,8 @@ export default {
                     {
                         name: "OmegaT DeepL Plugin — Professional Edition",
                         description: "A fully-featured DeepL API integration for OmegaT, providing proxy authentication, custom glossary management, formality control, and more for professional translators and enterprise teams.",
-                        url: common.storeUrl
+                        // url: common.storeUrl
+                        status: "Under development (Available late December)"
                     }
                 ]
             },

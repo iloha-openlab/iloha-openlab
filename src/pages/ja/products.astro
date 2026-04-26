@@ -53,6 +53,9 @@ const t = getDictionary(lang);
                     </a>
                   </p>
                 )}
+                {item.status && (
+                  <p class="status-badge">{item.status}</p>
+                )}
               </div>
             ))}
           </div>
@@ -171,5 +174,15 @@ const t = getDictionary(lang);
   }
   .cta-button:hover {
     background: #0051ad;
+  }
+  .status-badge {
+    display: inline-block;
+    background: #f0f0f0;
+    color: #666;
+    padding: 0.25rem 0.75rem;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    border: 1px solid #ddd;
   }
 </style>
