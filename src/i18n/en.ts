@@ -89,6 +89,12 @@ export default {
             title: "Original & Maintained OSS Projects",
             items: [
                 {
+                    name: "aqtinstall",
+                    role: "Author & Maintainer",
+                    description: "Another (unofficial) Qt CLI Installer on multi-platforms. Optimized for CI environments.",
+                    url: "https://github.com/miurahr/aqtinstall"
+                },
+                {
                     name: "pykakasi",
                     role: "Author & Maintainer",
                     description: "Python NLP library for converting Japanese text (Kanji/Kana) to Romaji.",

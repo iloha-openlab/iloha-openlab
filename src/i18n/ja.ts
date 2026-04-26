@@ -88,6 +88,12 @@ export default {
             title: "自作・主要メンテナンスOSSプロジェクト",
             items: [
                 {
+                    name: "aqtinstall",
+                    role: "作者・メンテナー",
+                    description: "マルチプラットフォーム対応の非公式 Qt CLI インストーラー。CI環境等での利用に最適化",
+                    url: "https://github.com/miurahr/aqtinstall"
+                },
+                {
                     name: "pykakasi",
                     role: "作者・メンテナー",
                     description: "日本語（漢字・かな）をローマ字に変換するPython NLPライブラリ",
