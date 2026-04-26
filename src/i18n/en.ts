@@ -108,31 +108,31 @@ export default {
                 },
                 {
                     name: "omegat-textra-plugin",
-                    role: "Author",
+                    role: "Author & Maintainer",
                     description: "NICT TexTra machine translation API plugin for OmegaT.",
                     url: "https://github.com/miurahr/omegat-textra-plugin"
                 },
                 {
                     name: "gradle-omegat-plugin",
-                    role: "Author",
+                    role: "Author & Maintainer",
                     description: "Plugin to integrate OmegaT translation memory into Gradle builds.",
                     url: "https://codeberg.org/miurahr/gradle-omegat-plugin"
                 },
                 {
                     name: "unihandecode",
-                    role: "Maintainer",
+                    role: "Author & Maintainer",
                     description: "Multilingual library to decode Unicode characters to ASCII.",
                     url: "https://github.com/miurahr/unihandecode"
                 },
                 {
                     name: "pyppmd",
-                    role: "Author",
+                    role: "Author & Maintainer",
                     description: "Python implementation of PPM (Prediction by Partial Matching) compression algorithm.",
                     url: "https://github.com/miurahr/pyppmd"
                 },
                 {
                     name: "inflate64",
-                    role: "Author",
+                    role: "Author & Maintainer",
                     description: "Python implementation of Enhanced Deflate (Deflate64) algorithm.",
                     url: "https://github.com/miurahr/inflate64"
                 }

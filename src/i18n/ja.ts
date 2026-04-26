@@ -107,31 +107,31 @@ export default {
                 },
                 {
                     name: "omegat-textra-plugin",
-                    role: "作者",
+                    role: "作者・メンテナー",
                     description: "OmegaT向けNICT TexTra機械翻訳APIプラグイン",
                     url: "https://github.com/miurahr/omegat-textra-plugin"
                 },
                 {
                     name: "gradle-omegat-plugin",
-                    role: "作者",
+                    role: "作者・メンテナー",
                     description: "OmegaT翻訳メモリをGradleビルドに統合するプラグイン",
                     url: "https://codeberg.org/miurahr/gradle-omegat-plugin"
                 },
                 {
                     name: "unihandecode",
-                    role: "メンテナー",
+                    role: "作者・メンテナー",
                     description: "Unicode文字をASCIIへ変換する多言語対応ライブラリ",
                     url: "https://github.com/miurahr/unihandecode"
                 },
                 {
                     name: "pyppmd",
-                    role: "作者",
+                    role: "作者・メンテナー",
                     description: "PPM（Prediction by Partial Matching）圧縮アルゴリズムのPython実装",
                     url: "https://github.com/miurahr/pyppmd"
                 },
                 {
                     name: "inflate64",
-                    role: "作者",
+                    role: "作者・メンテナー",
                     description: "Enhanced Deflate（Deflate64）アルゴリズムのPython実装",
                     url: "https://github.com/miurahr/inflate64"
                 }
