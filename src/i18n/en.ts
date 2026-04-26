@@ -137,7 +137,7 @@ export default {
                     description: "For contributions to the earthquake disaster support platform Sinsai.info project."
                 },
                 {
-                    title: "Financial Use Case Working Group Leadership Award",
+                    title: "Financial Use Case Working Group Contribution Award (IOWN Global Forum, 2025)",
                     description: "For contributions to working group coordination and white paper authorship in the joint white paper project with MUFG."
                 }
             ]

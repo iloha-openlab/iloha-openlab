@@ -136,7 +136,7 @@ export default {
                     description: "震災支援プラットフォーム Sinsai.info プロジェクトへの貢献"
                 },
                 {
-                    title: "Financial Use Case Working Group リーダーシップ表彰",
+                    title: "Financial Use Case Working Group 貢献表彰（IOWNグローバルフォーラム、2025年）",
                     description: "MUFGとの共同白書プロジェクトにおけるワーキンググループ調整と白書執筆への貢献"
                 }
             ]
