@@ -56,6 +56,11 @@ export default {
             title: "コミュニティ役職",
             items: [
                 {
+                    name: "青山学院大学 地球社会共生学部 (GSC)",
+                    role: "非常勤講師",
+                    description: "オープンソースや地理空間情報に関する教育を担当"
+                },
+                {
                     name: "一般社団法人 OpenStreetMap Foundation Japan (OSMFJ)",
                     role: "代表理事 (Executive Director)",
                     description: "日本のOpenStreetMapコミュニティを代表する非営利法人"

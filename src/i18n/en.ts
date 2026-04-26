@@ -57,6 +57,11 @@ export default {
             title: "Community Roles",
             items: [
                 {
+                    name: "Aoyama Gakuin University, School of Global Studies and Collaboration (GSC)",
+                    role: "Part-time Lecturer",
+                    description: "Teaching courses related to open source and geospatial information."
+                },
+                {
                     name: "OpenStreetMap Foundation Japan (OSMFJ)",
                     role: "Executive Director",
                     description: "A non-profit organization representing the OpenStreetMap community in Japan."
