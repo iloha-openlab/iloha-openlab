@@ -222,10 +222,28 @@ export default {
                 description: "OmegaTの機能を拡張するプラグインや関連ツールを提供します。",
                 items: [
                     {
-                        name: "OmegaT DeepL Plugin — Professional Edition",
-                        description: "OmegaT用のフル機能DeepL API統合プラグインです。プロキシ認証、カスタム用語集管理、訳文の丁寧さ（formality）制御などの機能を提供します。",
+                        name: "OmegaT with Premium DeepL Connector",
+                        description: "プロの翻訳者や企業チーム向けに設計された、OmegaT 用のフル機能 DeepL API 統合プラグインです。プロキシ認証、カスタム用語集管理、訳文の丁寧さ（formality）制御などの機能を提供します。注意：本プラグインの利用には DeepL API アカウントが必要です。deepl.com が提供する無料または有料の DeepL API キーは含まれていません。別途 deepl.com での登録が必要です。",
+                        variations: [
+                            {
+                                name: "Windows パッケージ",
+                                description: "Windows 11 用 署名済みOmegaT インストーラー、プレミアム DeepL プラグイン、高解像度ディスプレイ対応Javaランタイム、およびセットアップマニュアルのセット。"
+                            },
+                            {
+                                name: "Mac パッケージ",
+                                description: "Apple CPU 用に公証済みの OmegaT DMG、プレミアム DeepL プラグイン、高解像度ディスプレイ対応Javaランタイム、およびセットアップマニュアルのセット。"
+                            },
+                            {
+                                name: "プラグインのみ",
+                                description: "DeepL プラグインおよびセットアップマニュアル。"
+                            }
+                        ],
+                        pricing: [
+                            { name: "早期アクセス版", price: "15 EUR", description: "ベータ版アクセスおよび正式版、先着100名様" },
+                            { name: "プロフェッショナル版", price: "25 EUR", description: "正式版" },
+                            { name: "プラグインのみ", price: "10 EUR", description: "DeepL プラグインのみベータ版および正式版" }
+                        ],
                         // url: common.storeUrl
-                        status: "開発中（12月末提供予定）"
                     }
                 ]
             },

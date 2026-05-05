@@ -56,6 +56,35 @@ const t = getDictionary(lang);
                 {item.status && (
                   <p class="status-badge">{item.status}</p>
                 )}
+
+                {item.variations && (
+                  <div class="product-variations">
+                    <h4>構成内容</h4>
+                    <ul>
+                      {item.variations.map(variation => (
+                        <li>
+                          <strong>{variation.name}:</strong> {variation.description}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+
+                {item.pricing && (
+                  <div class="product-pricing">
+                    <h4>価格</h4>
+                    <ul>
+                      {item.pricing.map(p => (
+                        <li class="pricing-item">
+                          <div class="pricing-header">
+                            <span>{p.name}:</span> <strong>{p.price}</strong>
+                          </div>
+                          {p.description && <p class="pricing-description">{p.description}</p>}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
               </div>
             ))}
           </div>
@@ -184,5 +213,39 @@ const t = getDictionary(lang);
     font-size: 0.85rem;
     font-weight: bold;
     border: 1px solid #ddd;
+  }
+  .product-variations, .product-pricing {
+    margin-top: 1.5rem;
+  }
+  .product-variations h4, .product-pricing h4 {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 0.25rem;
+  }
+  .product-variations ul, .product-pricing ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .product-variations li, .product-pricing li {
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+    line-height: 1.4;
+  }
+  .product-pricing li {
+    display: block;
+    margin-bottom: 0.75rem;
+  }
+  .pricing-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .pricing-description {
+    margin: 0.25rem 0 0 0;
+    font-size: 0.85rem;
+    color: #666;
+    line-height: 1.4;
   }
 </style>

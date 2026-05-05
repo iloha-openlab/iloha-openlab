@@ -223,10 +223,28 @@ export default {
                 description: "We provide plugins and related tools to extend OmegaT's functionality.",
                 items: [
                     {
-                        name: "OmegaT DeepL Plugin — Professional Edition",
-                        description: "A fully-featured DeepL API integration for OmegaT, providing proxy authentication, custom glossary management, formality control, and more for professional translators and enterprise teams.",
+                        name: "OmegaT with Premium DeepL Connector",
+                        description: "A fully-featured DeepL API integration plugin for OmegaT, designed for professional translators and enterprise teams. Features include proxy authentication, custom glossary management, formality control, and more. Please note: This plugin requires a DeepL API account. A free or paid DeepL API key from deepl.com is not included — you will need to sign up separately at deepl.com.",
+                        variations: [
+                            {
+                                name: "Windows Package",
+                                description: "Packages with the signed OmegaT installer for Windows 11 with premium DeepL plugin, HiDPI support with up-to-date Java runtime, and setup manual."
+                            },
+                            {
+                                name: "Mac Package",
+                                description: "Packages with the OmegaT DMG notarized for Apple CPU with premium DeepL plugin, HiDPI support with up-to-date Java runtime, and setup manual."
+                            },
+                            {
+                                name: "Plugin only",
+                                description: "DeepL plugin and setup manual."
+                            }
+                        ],
+                        pricing: [
+                            { name: "Early access edition", price: "15 EUR", description: "Beta access and final release, limited to first 100 users" },
+                            { name: "Professional Edition", price: "25 EUR", description: "Final release" },
+                            { name: "Plugin only", price: "10 EUR", description: "Plugin only, beta and final release" }
+                        ],
                         // url: common.storeUrl
-                        status: "Under development (Available late December)"
                     }
                 ]
             },
