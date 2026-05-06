@@ -65,17 +65,19 @@ export default {
                 {
                     name: "青山学院大学 地球社会共生学部 (GSC)",
                     role: "非常勤講師",
-                    period: "2018年 – 現在",
+                    period: "2026年 – 現在",
                     description: "オープンソースや地理空間情報に関する教育を担当"
                 },
                 {
                     name: "一般社団法人 OpenStreetMap Foundation Japan (OSMFJ)",
                     role: "代表理事 (Executive Director)",
+                    period: "2010年 – 現在",
                     description: "日本のOpenStreetMapコミュニティを代表する非営利法人"
                 },
                 {
                     name: "OmegaT プロジェクト",
                     role: "プロジェクトリード・コアコントリビューター",
+                    period: "2016年 – 現在 (リード: 2023年 – 現在)",
                     description: "GNU GPL ライセンスのフリーソフトウェアCAT（コンピュータ支援翻訳）ツール"
                 },
                 {
@@ -257,9 +259,32 @@ export default {
             },
             {
                 id: "osm",
-                name: "OSM教育サービス",
-                description: "OpenStreetMapを用いたマッピング技術トレーニング、GIS教育サービスを提供します。",
-                items: []
+                name: "OSM教育・GIS導入支援",
+                description: "OpenStreetMapを用いたマッピング技術トレーニング、GIS教育サービスを提供します。青山学院大学でのGIS・オープンデータ教育の経験に基づき、OSSを活用した実践的な地理空間情報ハンドリングの講習を提供します。",
+                activitiesLink: "代表の活動紹介はこちら",
+                items: [
+                    {
+                        name: "地理空間情報・OSS活用講習・コンサルティング",
+                        description: "GIS（地理情報システム）やオープンデータの利活用、OSSツールの導入に関する教育・支援サービスです。お客様のニーズに合わせたカリキュラムを提案いたします。",
+                        variations: [
+                            {
+                                name: "単発講義・セミナー",
+                                description: "特定のテーマ（OSMマッピング、QGIS基礎、オープンデータ活用等）に絞った1回からの講義・実習。"
+                            },
+                            {
+                                name: "教材・テキスト作成",
+                                description: "組織内の教育や研修に利用するための、OSS・GIS・オープンデータに関する専門的なテキスト・マニュアルの執筆。"
+                            },
+                            {
+                                name: "フルコース講習",
+                                description: "基礎から応用まで体系的に学ぶ、複数回にわたる継続的な教育プログラムの提供。"
+                            }
+                        ],
+                        pricing: [
+                            { name: "価格", price: "お見積り", description: "ご要望の内容、期間、規模に応じて個別にご提案いたします。" }
+                        ]
+                    }
+                ]
             }
         ]
     },

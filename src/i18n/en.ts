@@ -66,17 +66,19 @@ export default {
                 {
                     name: "Aoyama Gakuin University, School of Global Studies and Collaboration (GSC)",
                     role: "Part-time Lecturer",
-                    period: "2018 – Present",
+                    period: "2026 – Present",
                     description: "Teaching courses related to open source and geospatial information."
                 },
                 {
                     name: "OpenStreetMap Foundation Japan (OSMFJ)",
                     role: "Executive Director",
+                    period: "2010 – Present",
                     description: "A non-profit organization representing the OpenStreetMap community in Japan."
                 },
                 {
                     name: "OmegaT Project",
                     role: "Project Lead & Core Contributor",
+                    period: "2016 – Present (Lead: 2023 – Present)",
                     description: "Free software CAT (Computer-Aided Translation) tool under the GNU GPL license."
                 },
                 {
@@ -258,9 +260,32 @@ export default {
             },
             {
                 id: "osm",
-                name: "OSM Educational Services",
-                description: "Mapping technic training with OpenStreetMap, and GIS educational services.",
-                items: []
+                name: "OSM Educational & GIS Support Services",
+                description: "We provide mapping technique training with OpenStreetMap and GIS educational services. Based on experience teaching GIS and Open Data at Aoyama Gakuin University, we offer practical courses on handling geospatial information with OSS tooling.",
+                activitiesLink: "Learn more about our representative's activities",
+                items: [
+                    {
+                        name: "Geospatial Information & OSS Training/Consulting",
+                        description: "Education and support services for GIS (Geographic Information Systems), open data utilization, and implementation of OSS tools. We propose tailored curricula based on your specific needs.",
+                        variations: [
+                            {
+                                name: "One-shot Lecture / Seminar",
+                                description: "Focused lectures or workshops on specific themes such as OSM mapping, QGIS basics, or open data utilization."
+                            },
+                            {
+                                name: "Text Writing / Educational Material",
+                                description: "Professional writing of texts and manuals related to OSS, GIS, and open data for internal education or training."
+                            },
+                            {
+                                name: "Full Course",
+                                description: "Comprehensive, multi-session educational programs for systematic learning from basics to advanced applications."
+                            }
+                        ],
+                        pricing: [
+                            { name: "Price", price: "On proposal", description: "We provide individual proposals based on requirements, duration, and scale." }
+                        ]
+                    }
+                ]
             }
         ]
     },

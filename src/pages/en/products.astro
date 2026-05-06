@@ -45,6 +45,12 @@ const t = getDictionary(lang);
       >
         <h2>{category.name}</h2>
         <p>{category.description}</p>
+
+        {(category as any).activitiesLink && (
+          <p class="activities-link">
+            <a href={`/${lang}/activities`}>{(category as any).activitiesLink} →</a>
+          </p>
+        )}
         
         {category.items && category.items.length > 0 && (
           <div class="product-list">
@@ -65,7 +71,7 @@ const t = getDictionary(lang);
                 
                 {item.variations && (
                   <div class="product-variations">
-                    <h4>Variations</h4>
+                    <h4>{lang === "ja" ? "メニュー" : "Menu"}</h4>
                     <ul>
                       {item.variations.map(variation => (
                         <li>
@@ -196,6 +202,18 @@ const t = getDictionary(lang);
   }
   .tab-panel {
     padding: 1rem 0;
+  }
+  .activities-link {
+    margin-top: -0.5rem;
+    margin-bottom: 1.5rem;
+  }
+  .activities-link a {
+    color: #0070f3;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  .activities-link a:hover {
+    text-decoration: underline;
   }
   .tab-panel[hidden] {
     display: none;
