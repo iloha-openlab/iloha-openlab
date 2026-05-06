@@ -31,6 +31,7 @@ export default {
         news: "おしらせ",
         message: "ご挨拶",
         products: "商品・サービス",
+        store: "ストア",
         activities: "活動紹介",
         privacy: "プライバシーポリシー",
         logoPolicy: "ロゴ使用規定",
@@ -215,6 +216,7 @@ export default {
     },
     products: {
         title: "商品・サービス",
+        visitStore: "オンラインストアはこちら",
         categories: [
             {
                 id: "omegat",
@@ -243,7 +245,7 @@ export default {
                             { name: "プロフェッショナル版", price: "25 EUR", description: "正式版" },
                             { name: "プラグインのみ", price: "10 EUR", description: "DeepL プラグインのみベータ版および正式版" }
                         ],
-                        // url: common.storeUrl
+                        url: common.storeUrl
                     }
                 ]
             },

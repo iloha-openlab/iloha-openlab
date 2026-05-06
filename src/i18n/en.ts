@@ -32,6 +32,7 @@ export default {
         news: "News",
         message: "Message",
         products: "Products & Services",
+        store: "Store",
         activities: "Activities",
         privacy: "Privacy Policy",
         logoPolicy: "Logo Usage Policy",
@@ -216,6 +217,7 @@ export default {
     },
     products: {
         title: "Products & Services",
+        visitStore: "Visit our Online Store",
         categories: [
             {
                 id: "omegat",
@@ -244,7 +246,7 @@ export default {
                             { name: "Professional Edition", price: "25 EUR", description: "Final release" },
                             { name: "Plugin only", price: "10 EUR", description: "Plugin only, beta and final release" }
                         ],
-                        // url: common.storeUrl
+                        url: common.storeUrl
                     }
                 ]
             },

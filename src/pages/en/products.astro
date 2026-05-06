@@ -13,6 +13,12 @@ const t = getDictionary(lang);
 >
   <h1>{t.products.title}</h1>
 
+  <div class="store-link-container">
+    <a href="https://store.iloha-openlab.com/" target="_blank" rel="noopener noreferrer" class="store-button">
+      {t.products.visitStore} ↗️
+    </a>
+  </div>
+
   <div class="tabs">
     <div class="tab-list" role="tablist">
       {t.products.categories.map((category, index) => (
@@ -145,6 +151,24 @@ const t = getDictionary(lang);
 <style>
   .tabs {
     margin-top: 2rem;
+  }
+  .store-link-container {
+    margin: 1.5rem 0;
+    text-align: center;
+  }
+  .store-button {
+    display: inline-block;
+    background: #ff5e00;
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: background 0.2s;
+  }
+  .store-button:hover {
+    background: #e65500;
   }
   .tab-list {
     display: flex;
