@@ -7,7 +7,7 @@ lang: "en"
 
 # OmegaT with Premium DeepL Connector
 
-**OmegaT with Premium DeepL Connector** is a professional-grade DeepL Neural Machine Translation integration for [OmegaT](https://omegat.org/), the free and open-source Computer-Aided Translation (CAT) tool. Developed and distributed by ILOHA OpenLab LLC, it brings enterprise-ready features to translators who demand more from their MT workflow.
+**OmegaT with Premium DeepL Connector** is a professional-grade DeepL Neural Machine Translation integration for [OmegaT](https://omegat.org/), the free and open-source Computer-Aided Translation (CAT) tool. [_Developed and distributed by ILOHA OpenLab LLC_](https://store.iloha-openlab.com/), it brings enterprise-ready features to translators who demand more from their MT workflow.
 
 > **Important:** This plugin requires a separate DeepL API account from [deepl.com](https://www.deepl.com/pro-api). Both the DeepL API Free and API Pro tiers are supported. A DeepL API key is **not** included with this product.
 
@@ -128,6 +128,6 @@ The plugin will display a "Quota exceeded" message in the Machine Translation pa
 
 ---
 
-For purchase inquiries, please visit our [online store](https://store.iloha-openlab.com) or contact us at [contact@iloha-openlab.com](mailto:contact@iloha-openlab.com).
+For purchase inquiries, please visit our [_online store_](https://store.iloha-openlab.com) or contact us at [contact@iloha-openlab.com](mailto:contact@iloha-openlab.com).
 
 Thank you for your continued support of ILOHA OpenLab's mission to engineer sustainable open ecosystems.
