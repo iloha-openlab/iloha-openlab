@@ -248,7 +248,8 @@ export default {
                             { name: "Professional Edition", price: "25 EUR", description: "Final release" },
                             { name: "Plugin only", price: "10 EUR", description: "Plugin only, beta and final release" }
                         ],
-                        url: common.storeUrl
+                        url: common.storeUrl,
+                        details: "/en/news/20260510-omegat-deepl-premium/"
                     }
                 ]
             },

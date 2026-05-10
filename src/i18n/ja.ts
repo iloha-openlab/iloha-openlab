@@ -247,7 +247,8 @@ export default {
                             { name: "プロフェッショナル版", price: "25 EUR", description: "正式版" },
                             { name: "プラグインのみ", price: "10 EUR", description: "DeepL プラグインのみベータ版および正式版" }
                         ],
-                        url: common.storeUrl
+                        url: common.storeUrl,
+                        details: "/ja/news/20260510-omegat-deepl-premium/"
                     }
                 ]
             },
