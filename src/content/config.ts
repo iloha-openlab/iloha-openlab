@@ -8,6 +8,7 @@ const newsCollection = defineCollection({
     description: z.string(),
     image: z.union([image(), z.string().url()]).optional(),
     lang: z.enum(['en', 'ja']),
+    storeUrl: z.string().url().optional(),
   }),
 });
 

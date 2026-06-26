@@ -36,6 +36,13 @@ const t = getDictionary(lang);
         <Image src={entry.data.image} alt="" class="hero-image" />
       )
     )}
+    {entry.data.storeUrl && (
+      <div class="store-cta">
+        <a href={entry.data.storeUrl} target="_blank" rel="noopener noreferrer" class="store-button">
+          Buy in Store ↗
+        </a>
+      </div>
+    )}
     <div class="content">
       <Content />
     </div>
@@ -47,6 +54,23 @@ const t = getDictionary(lang);
     color: #666;
     display: block;
     margin-bottom: 2rem;
+  }
+  .store-cta {
+    margin: 1.5rem 0;
+  }
+  .store-button {
+    display: inline-block;
+    background: #ff5e00;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: background 0.2s;
+  }
+  .store-button:hover {
+    background: #e65500;
   }
   .hero-image {
     width: auto;

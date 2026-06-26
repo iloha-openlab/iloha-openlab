@@ -3,6 +3,7 @@ title: "OmegaT with Premium DeepL Connector — 製品詳細のご紹介"
 date: 2026-05-10
 description: "プロの翻訳者向けに設計されたOmegaT用DeepLプレミアム統合プラグインの機能・導入方法・価格をご紹介します。"
 lang: "ja"
+storeUrl: "https://store.iloha-openlab.com"
 ---
 
 # OmegaT with Premium DeepL Connector
