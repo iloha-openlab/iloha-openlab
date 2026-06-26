@@ -32,6 +32,7 @@ export default {
         message: "ご挨拶",
         products: "商品・サービス",
         store: "ストア",
+        support: "サポート",
         activities: "活動紹介",
         privacy: "プライバシーポリシー",
         logoPolicy: "ロゴ使用規定",

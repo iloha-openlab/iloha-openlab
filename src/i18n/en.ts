@@ -33,6 +33,7 @@ export default {
         message: "Message",
         products: "Products & Services",
         store: "Store",
+        support: "Support",
         activities: "Activities",
         privacy: "Privacy Policy",
         logoPolicy: "Logo Usage Policy",
